@@ -1,1383 +1,2821 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Miguel Sanchez – Website Designer & Developer. Responsive design, WordPress, Elementor, SEO, and front-end development for professional web projects." />
-  <meta name="author" content="Miguel Sanchez" />
-  <title>Miguel Sanchez — Website Designer & Developer</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Miguel Sanchez – Website Designer & Developer. Responsive design, WordPress, Elementor, SEO, and front-end development for professional web projects."
+    />
+    <meta name="author" content="Miguel Sanchez" />
+    <title>Miguel Sanchez — Website Designer & Developer</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
 
-  <style>
-    /* ──────────────────────────────────────────
+    <style>
+      /* ──────────────────────────────────────────
        TOKENS
     ────────────────────────────────────────── */
-    :root {
-      --cream:      #f5f2ed;
-      --cream-2:    #ede9e2;
-      --white:      #ffffff;
-      --border:     #d9d3c8;
-      --border-2:   #c8c0b4;
+      :root {
+        --cream: #f5f2ed;
+        --cream-2: #ede9e2;
+        --white: #ffffff;
+        --border: #d9d3c8;
+        --border-2: #c8c0b4;
 
-      --ink:        #0f0e0c;
-      --ink-2:      #2a241b;
-      --muted:      #6e6558;
-      --subtle:     #a09280;
+        --ink: #0f0e0c;
+        --ink-2: #2a241b;
+        --muted: #6e6558;
+        --subtle: #a09280;
 
-      --navy:       #1d3d5c;
-      --navy-2:     #142a40;
-      --navy-hover: #27507a;
-      --navy-tint:  #e8f0f8;
+        --navy: #1d3d5c;
+        --navy-2: #142a40;
+        --navy-hover: #27507a;
+        --navy-tint: #e8f0f8;
 
-      --terra:      #c94c28;   /* terracotta — the creative accent */
-      --terra-h:    #b03d1f;
-      --terra-tint: #fdf1eb;
-      --terra-bdr:  #e8a88a;
+        --terra: #c94c28; /* terracotta — the creative accent */
+        --terra-h: #b03d1f;
+        --terra-tint: #fdf1eb;
+        --terra-bdr: #e8a88a;
 
-      --green:      #256b49;
-      --green-tint: #e5f3ec;
+        --green: #256b49;
+        --green-tint: #e5f3ec;
 
-      --shadow-sm:  0 2px 8px rgba(15,14,12,.07);
-      --shadow:     0 4px 20px rgba(15,14,12,.09);
-      --shadow-lg:  0 12px 40px rgba(15,14,12,.12);
+        --shadow-sm: 0 2px 8px rgba(15, 14, 12, 0.07);
+        --shadow: 0 4px 20px rgba(15, 14, 12, 0.09);
+        --shadow-lg: 0 12px 40px rgba(15, 14, 12, 0.12);
 
-      --r:          8px;
-      --rl:         14px;
-      --ease:       all .22s ease;
-    }
+        --r: 8px;
+        --rl: 14px;
+        --ease: all 0.22s ease;
+      }
 
-    /* ──────────────────────────────────────────
+      /* ──────────────────────────────────────────
        RESET
     ────────────────────────────────────────── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; font-size: 16px; }
-    body {
-      font-family: 'Inter', system-ui, sans-serif;
-      background: var(--cream);
-      color: var(--ink); line-height: 1.7; overflow-x: hidden;
-    }
-    ::selection { background: var(--terra); color: #fff; }
-    a { color: inherit; text-decoration: none; }
-    ::-webkit-scrollbar { width: 4px; }
-    ::-webkit-scrollbar-track { background: var(--cream-2); }
-    ::-webkit-scrollbar-thumb { background: var(--navy); border-radius: 3px; }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+        font-size: 16px;
+      }
+      body {
+        font-family: "Inter", system-ui, sans-serif;
+        background: var(--cream);
+        color: var(--ink);
+        line-height: 1.7;
+        overflow-x: hidden;
+      }
+      ::selection {
+        background: var(--terra);
+        color: #fff;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      ::-webkit-scrollbar {
+        width: 4px;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--cream-2);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--navy);
+        border-radius: 3px;
+      }
 
-    /* ──────────────────────────────────────────
+      /* ──────────────────────────────────────────
        LAYOUT
     ────────────────────────────────────────── */
-    .container { max-width: 1140px; margin: 0 auto; padding: 0 32px; }
-    .section    { padding: 100px 0; }
-    .on-white   { background: var(--white); }
+      .container {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0 32px;
+      }
+      .section {
+        padding: 100px 0;
+      }
+      .on-white {
+        background: var(--white);
+      }
 
-    /* ──────────────────────────────────────────
+      /* ──────────────────────────────────────────
        TYPOGRAPHY SYSTEM
     ────────────────────────────────────────── */
-    .eyebrow {
-      display: inline-flex; align-items: center; gap: 10px;
-      font-size: .68rem; font-weight: 700; letter-spacing: .16em;
-      text-transform: uppercase; color: var(--muted);
-    }
-    .eyebrow::before {
-      content: ''; display: block; width: 24px; height: 2px;
-      background: var(--terra); border-radius: 2px; flex-shrink: 0;
-    }
-    .display {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2.1rem, 4.5vw, 3.4rem);
-      font-weight: 900; line-height: 1.1; color: var(--ink); margin-bottom: 16px;
-    }
-    .display em { font-style: italic; color: var(--terra); }
-    .lead { color: var(--muted); font-size: 1.05rem; line-height: 1.82; }
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      .eyebrow::before {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: var(--terra);
+        border-radius: 2px;
+        flex-shrink: 0;
+      }
+      .display {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(2.1rem, 4.5vw, 3.4rem);
+        font-weight: 900;
+        line-height: 1.1;
+        color: var(--ink);
+        margin-bottom: 16px;
+      }
+      .display em {
+        font-style: italic;
+        color: var(--terra);
+      }
+      .lead {
+        color: var(--muted);
+        font-size: 1.05rem;
+        line-height: 1.82;
+      }
 
-    /* ──────────────────────────────────────────
+      /* ──────────────────────────────────────────
        BUTTONS
     ────────────────────────────────────────── */
-    .btn {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 12px 26px; border-radius: var(--r);
-      font-size: .875rem; font-weight: 700;
-      border: none; cursor: pointer; transition: var(--ease);
-      letter-spacing: .01em; font-family: 'Inter', sans-serif;
-    }
-    .btn-terra  { background: var(--terra);  color: #fff; box-shadow: 0 4px 14px rgba(201,76,40,.3); }
-    .btn-terra:hover  { background: var(--terra-h); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(201,76,40,.4); }
-    .btn-navy   { background: var(--navy);   color: #fff; }
-    .btn-navy:hover   { background: var(--navy-hover); transform: translateY(-2px); }
-    .btn-ghost  { background: transparent; color: var(--ink); border: 1.5px solid var(--border-2); }
-    .btn-ghost:hover  { border-color: var(--terra); color: var(--terra); transform: translateY(-2px); }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 26px;
+        border-radius: var(--r);
+        font-size: 0.875rem;
+        font-weight: 700;
+        border: none;
+        cursor: pointer;
+        transition: var(--ease);
+        letter-spacing: 0.01em;
+        font-family: "Inter", sans-serif;
+      }
+      .btn-terra {
+        background: var(--terra);
+        color: #fff;
+        box-shadow: 0 4px 14px rgba(201, 76, 40, 0.3);
+      }
+      .btn-terra:hover {
+        background: var(--terra-h);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(201, 76, 40, 0.4);
+      }
+      .btn-navy {
+        background: var(--navy);
+        color: #fff;
+      }
+      .btn-navy:hover {
+        background: var(--navy-hover);
+        transform: translateY(-2px);
+      }
+      .btn-ghost {
+        background: transparent;
+        color: var(--ink);
+        border: 1.5px solid var(--border-2);
+      }
+      .btn-ghost:hover {
+        border-color: var(--terra);
+        color: var(--terra);
+        transform: translateY(-2px);
+      }
 
-    /* ──────────────────────────────────────────
+      /* ──────────────────────────────────────────
        TAGS
     ────────────────────────────────────────── */
-    .tag {
-      display: inline-flex; align-items: center; gap: 5px;
-      padding: 4px 11px; border-radius: 4px;
-      font-size: .72rem; font-weight: 600; border: 1px solid; letter-spacing: .01em;
-    }
-    .t-navy   { background: var(--navy-tint); border-color: #b5cfe0; color: var(--navy); }
-    .t-terra  { background: var(--terra-tint); border-color: var(--terra-bdr); color: var(--terra); }
-    .t-green  { background: var(--green-tint); border-color: #9acfb5; color: var(--green); }
-    .t-ink    { background: var(--cream-2); border-color: var(--border); color: var(--ink-2); }
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        padding: 4px 11px;
+        border-radius: 4px;
+        font-size: 0.72rem;
+        font-weight: 600;
+        border: 1px solid;
+        letter-spacing: 0.01em;
+      }
+      .t-navy {
+        background: var(--navy-tint);
+        border-color: #b5cfe0;
+        color: var(--navy);
+      }
+      .t-terra {
+        background: var(--terra-tint);
+        border-color: var(--terra-bdr);
+        color: var(--terra);
+      }
+      .t-green {
+        background: var(--green-tint);
+        border-color: #9acfb5;
+        color: var(--green);
+      }
+      .t-ink {
+        background: var(--cream-2);
+        border-color: var(--border);
+        color: var(--ink-2);
+      }
 
-    /* ──────────────────────────────────────────
+      /* ──────────────────────────────────────────
        SCROLL REVEAL
     ────────────────────────────────────────── */
-    .reveal { opacity: 0; transform: translateY(22px); transition: opacity .55s ease, transform .55s ease; }
-    .reveal.in  { opacity: 1; transform: none; }
-    .reveal.d1  { transition-delay: .08s; }
-    .reveal.d2  { transition-delay: .16s; }
-    .reveal.d3  { transition-delay: .24s; }
+      .reveal {
+        opacity: 0;
+        transform: translateY(22px);
+        transition:
+          opacity 0.55s ease,
+          transform 0.55s ease;
+      }
+      .reveal.in {
+        opacity: 1;
+        transform: none;
+      }
+      .reveal.d1 {
+        transition-delay: 0.08s;
+      }
+      .reveal.d2 {
+        transition-delay: 0.16s;
+      }
+      .reveal.d3 {
+        transition-delay: 0.24s;
+      }
 
-    /* ══════════════════════════════════════════
+      /* ══════════════════════════════════════════
        NAVBAR
     ══════════════════════════════════════════ */
-    #nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 900;
-      padding: 0 32px; transition: var(--ease);
-    }
-    #nav.scrolled {
-      background: rgba(245,242,237,.92);
-      backdrop-filter: blur(14px) saturate(1.5);
-      border-bottom: 1px solid var(--border);
-      box-shadow: var(--shadow-sm);
-    }
-    .nav-in {
-      max-width: 1140px; margin: 0 auto;
-      display: flex; align-items: center; justify-content: space-between; height: 68px;
-    }
-    .nav-logo {
-      font-size: .85rem; font-weight: 800; letter-spacing: .02em; color: var(--ink);
-    }
-    .nav-logo span { color: var(--terra); }
-    .nav-links { display: flex; align-items: center; gap: 30px; list-style: none; }
-    .nav-links a { font-size: .82rem; font-weight: 500; color: var(--muted); transition: var(--ease); }
-    .nav-links a:hover { color: var(--terra); }
-    .hamburger {
-      display: none; flex-direction: column; gap: 5px;
-      cursor: pointer; background: none; border: none; padding: 4px;
-    }
-    .hamburger span { display: block; width: 22px; height: 1.5px; background: var(--ink); transition: var(--ease); }
-    .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
-    .hamburger.open span:nth-child(2) { opacity: 0; }
-    .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
-    .mob-nav {
-      display: none; position: fixed; inset: 0; top: 68px;
-      background: rgba(245,242,237,.97); backdrop-filter: blur(18px);
-      z-index: 850; flex-direction: column; align-items: center;
-      justify-content: center; gap: 36px; list-style: none;
-    }
-    .mob-nav.open { display: flex; }
-    .mob-nav a { font-size: 1.4rem; font-weight: 700; color: var(--ink); transition: var(--ease); }
-    .mob-nav a:hover { color: var(--terra); }
+      #nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 900;
+        padding: 0 32px;
+        transition: var(--ease);
+      }
+      #nav.scrolled {
+        background: rgba(245, 242, 237, 0.92);
+        backdrop-filter: blur(14px) saturate(1.5);
+        border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow-sm);
+      }
+      .nav-in {
+        max-width: 1140px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 68px;
+      }
+      .nav-logo {
+        font-size: 0.85rem;
+        font-weight: 800;
+        letter-spacing: 0.02em;
+        color: var(--ink);
+      }
+      .nav-logo span {
+        color: var(--terra);
+      }
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        list-style: none;
+      }
+      .nav-links a {
+        font-size: 0.82rem;
+        font-weight: 500;
+        color: var(--muted);
+        transition: var(--ease);
+      }
+      .nav-links a:hover {
+        color: var(--terra);
+      }
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 4px;
+      }
+      .hamburger span {
+        display: block;
+        width: 22px;
+        height: 1.5px;
+        background: var(--ink);
+        transition: var(--ease);
+      }
+      .hamburger.open span:nth-child(1) {
+        transform: translateY(6.5px) rotate(45deg);
+      }
+      .hamburger.open span:nth-child(2) {
+        opacity: 0;
+      }
+      .hamburger.open span:nth-child(3) {
+        transform: translateY(-6.5px) rotate(-45deg);
+      }
+      .mob-nav {
+        display: none;
+        position: fixed;
+        inset: 0;
+        top: 68px;
+        background: rgba(245, 242, 237, 0.97);
+        backdrop-filter: blur(18px);
+        z-index: 850;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 36px;
+        list-style: none;
+      }
+      .mob-nav.open {
+        display: flex;
+      }
+      .mob-nav a {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: var(--ink);
+        transition: var(--ease);
+      }
+      .mob-nav a:hover {
+        color: var(--terra);
+      }
 
-    /* ══════════════════════════════════════════
+      /* ══════════════════════════════════════════
        HERO
     ══════════════════════════════════════════ */
-    #hero {
-      min-height: 100vh; padding-top: 68px;
-      display: flex; align-items: center;
-      background-color: var(--cream);
-      background-image: radial-gradient(circle, var(--border) 1px, transparent 1px);
-      background-size: 28px 28px;
-      position: relative; overflow: hidden;
-    }
-    .hero-grid {
-      display: grid; grid-template-columns: 1fr 400px;
-      gap: 64px; align-items: center; width: 100%;
-      padding: 64px 0;
-    }
-    .hero-tag {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: var(--white); border: 1px solid var(--border);
-      border-radius: 100px; padding: 6px 16px;
-      font-size: .72rem; font-weight: 700; color: var(--muted);
-      letter-spacing: .08em; text-transform: uppercase;
-      margin-bottom: 24px; box-shadow: var(--shadow-sm);
-    }
-    .hero-tag i { color: var(--terra); }
-    .hero-h {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(3rem, 7vw, 5.5rem);
-      font-weight: 900; line-height: 1.04; color: var(--ink);
-      margin-bottom: 28px; letter-spacing: -.01em;
-    }
-    .hero-h .u {
-      position: relative; display: inline;
-    }
-    .hero-h .u::after {
-      content: ''; position: absolute;
-      bottom: 2px; left: 0; right: 0; height: 4px;
-      background: var(--terra); border-radius: 2px;
-    }
-    .hero-desc { color: var(--muted); font-size: 1.05rem; line-height: 1.82; max-width: 480px; margin-bottom: 36px; }
-    .hero-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 36px; }
-    .hero-btns  { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 52px; }
-    .hero-socials { display: flex; gap: 10px; }
-    .hero-socials a {
-      width: 40px; height: 40px; border-radius: var(--r);
-      display: flex; align-items: center; justify-content: center;
-      border: 1px solid var(--border); color: var(--muted); background: var(--white);
-      font-size: .9rem; transition: var(--ease);
-    }
-    .hero-socials a:hover { border-color: var(--terra); color: var(--terra); transform: translateY(-2px); }
+      #hero {
+        min-height: 100vh;
+        padding-top: 68px;
+        display: flex;
+        align-items: center;
+        background-color: var(--cream);
+        background-image: radial-gradient(
+          circle,
+          var(--border) 1px,
+          transparent 1px
+        );
+        background-size: 28px 28px;
+        position: relative;
+        overflow: hidden;
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1fr 400px;
+        gap: 64px;
+        align-items: center;
+        width: 100%;
+        padding: 64px 0;
+      }
+      .hero-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: 100px;
+        padding: 6px 16px;
+        font-size: 0.72rem;
+        font-weight: 700;
+        color: var(--muted);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 24px;
+        box-shadow: var(--shadow-sm);
+      }
+      .hero-tag i {
+        color: var(--terra);
+      }
+      .hero-h {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(3rem, 7vw, 5.5rem);
+        font-weight: 900;
+        line-height: 1.04;
+        color: var(--ink);
+        margin-bottom: 28px;
+        letter-spacing: -0.01em;
+      }
+      .hero-h .u {
+        position: relative;
+        display: inline;
+      }
+      .hero-h .u::after {
+        content: "";
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: var(--terra);
+        border-radius: 2px;
+      }
+      .hero-desc {
+        color: var(--muted);
+        font-size: 1.05rem;
+        line-height: 1.82;
+        max-width: 480px;
+        margin-bottom: 36px;
+      }
+      .hero-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 36px;
+      }
+      .hero-btns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 52px;
+      }
+      .hero-socials {
+        display: flex;
+        gap: 10px;
+      }
+      .hero-socials a {
+        width: 40px;
+        height: 40px;
+        border-radius: var(--r);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--border);
+        color: var(--muted);
+        background: var(--white);
+        font-size: 0.9rem;
+        transition: var(--ease);
+      }
+      .hero-socials a:hover {
+        border-color: var(--terra);
+        color: var(--terra);
+        transform: translateY(-2px);
+      }
 
-    /* Dark profile card */
-    .profile-card {
-      background: var(--navy-2);
-      border-radius: var(--rl); padding: 30px;
-      box-shadow: var(--shadow-lg);
-      position: relative; overflow: hidden;
-    }
-    .profile-card::before {
-      content: ''; position: absolute;
-      top: -60px; right: -60px; width: 220px; height: 220px;
-      border-radius: 50%; background: rgba(201,76,40,.12);
-      pointer-events: none;
-    }
-    .pc-top {
-      display: flex; align-items: center; gap: 14px;
-      margin-bottom: 26px; padding-bottom: 22px;
-      border-bottom: 1px solid rgba(255,255,255,.1);
-    }
-    .pc-av {
-      width: 50px; height: 50px; border-radius: 10px;
-      background: var(--terra); color: #fff;
-      display: flex; align-items: center; justify-content: center;
-      font-size: .875rem; font-weight: 800; flex-shrink: 0; letter-spacing: .02em;
-    }
-    .pc-name { font-size: .95rem; font-weight: 700; color: #f5f2ed; }
-    .pc-role { font-size: .76rem; color: rgba(245,242,237,.45); margin-top: 2px; }
-    .pc-stats {
-      display: grid; grid-template-columns: repeat(3,1fr);
-      gap: 10px; margin-bottom: 24px;
-    }
-    .pstat {
-      background: rgba(255,255,255,.06); border-radius: var(--r);
-      padding: 14px 8px; text-align: center; border: 1px solid rgba(255,255,255,.08);
-    }
-    .pstat-n {
-      font-size: 1.4rem; font-weight: 800; color: #f5f2ed;
-      line-height: 1; font-variant-numeric: tabular-nums;
-    }
-    .pstat-l { font-size: .62rem; color: rgba(245,242,237,.4); margin-top: 4px; font-weight: 600; text-transform: uppercase; letter-spacing: .07em; }
-    .pc-bars { display: flex; flex-direction: column; gap: 10px; }
-    .pb-row { display: flex; align-items: center; gap: 10px; }
-    .pb-l { font-size: .72rem; color: rgba(245,242,237,.5); width: 74px; flex-shrink: 0; font-weight: 500; }
-    .pb-tr { flex: 1; height: 3px; background: rgba(255,255,255,.1); border-radius: 2px; overflow: hidden; }
-    .pb-f  { height: 100%; background: var(--terra); border-radius: 2px; animation: fillB 1.2s ease-out forwards; }
-    @keyframes fillB { from { width: 0 !important; } }
-    .pb-pct { font-size: .68rem; color: rgba(245,242,237,.35); width: 28px; text-align: right; flex-shrink: 0; font-weight: 600; }
+      /* Dark profile card */
+      .profile-card {
+        background: var(--navy-2);
+        border-radius: var(--rl);
+        padding: 30px;
+        box-shadow: var(--shadow-lg);
+        position: relative;
+        overflow: hidden;
+      }
+      .profile-card::before {
+        content: "";
+        position: absolute;
+        top: -60px;
+        right: -60px;
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        background: rgba(201, 76, 40, 0.12);
+        pointer-events: none;
+      }
+      .pc-top {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 26px;
+        padding-bottom: 22px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .pc-av {
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        background: var(--terra);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.875rem;
+        font-weight: 800;
+        flex-shrink: 0;
+        letter-spacing: 0.02em;
+      }
+      .pc-name {
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: #f5f2ed;
+      }
+      .pc-role {
+        font-size: 0.76rem;
+        color: rgba(245, 242, 237, 0.45);
+        margin-top: 2px;
+      }
+      .pc-stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin-bottom: 24px;
+      }
+      .pstat {
+        background: rgba(255, 255, 255, 0.06);
+        border-radius: var(--r);
+        padding: 14px 8px;
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .pstat-n {
+        font-size: 1.4rem;
+        font-weight: 800;
+        color: #f5f2ed;
+        line-height: 1;
+        font-variant-numeric: tabular-nums;
+      }
+      .pstat-l {
+        font-size: 0.62rem;
+        color: rgba(245, 242, 237, 0.4);
+        margin-top: 4px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+      }
+      .pc-bars {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .pb-row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .pb-l {
+        font-size: 0.72rem;
+        color: rgba(245, 242, 237, 0.5);
+        width: 74px;
+        flex-shrink: 0;
+        font-weight: 500;
+      }
+      .pb-tr {
+        flex: 1;
+        height: 3px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 2px;
+        overflow: hidden;
+      }
+      .pb-f {
+        height: 100%;
+        background: var(--terra);
+        border-radius: 2px;
+        animation: fillB 1.2s ease-out forwards;
+      }
+      @keyframes fillB {
+        from {
+          width: 0 !important;
+        }
+      }
+      .pb-pct {
+        font-size: 0.68rem;
+        color: rgba(245, 242, 237, 0.35);
+        width: 28px;
+        text-align: right;
+        flex-shrink: 0;
+        font-weight: 600;
+      }
 
-    /* ══════════════════════════════════════════
+      /* ══════════════════════════════════════════
        TICKER STRIP
     ══════════════════════════════════════════ */
-    .ticker-strip {
-      background: var(--navy-2); overflow: hidden;
-      padding: 18px 0;
-      border-top: 1px solid rgba(255,255,255,.06);
-      border-bottom: 1px solid rgba(255,255,255,.06);
-    }
-    .ticker-track { overflow: hidden; white-space: nowrap; }
-    .ticker-inner {
-      display: inline-flex; gap: 0;
-      animation: tickerMove 35s linear infinite;
-    }
-    .ticker-inner:hover { animation-play-state: paused; }
-    .tk-item {
-      display: inline-flex; align-items: center; gap: 18px;
-      padding: 0 18px;
-    }
-    .tk-item span { font-size: .73rem; font-weight: 700; color: rgba(245,242,237,.55); letter-spacing: .1em; text-transform: uppercase; white-space: nowrap; }
-    .tk-item i { color: var(--terra); font-size: .7rem; }
-    @keyframes tickerMove {
-      0%   { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
+      .ticker-strip {
+        background: var(--navy-2);
+        overflow: hidden;
+        padding: 18px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      }
+      .ticker-track {
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      .ticker-inner {
+        display: inline-flex;
+        gap: 0;
+        animation: tickerMove 35s linear infinite;
+      }
+      .ticker-inner:hover {
+        animation-play-state: paused;
+      }
+      .tk-item {
+        display: inline-flex;
+        align-items: center;
+        gap: 18px;
+        padding: 0 18px;
+      }
+      .tk-item span {
+        font-size: 0.73rem;
+        font-weight: 700;
+        color: rgba(245, 242, 237, 0.55);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+      .tk-item i {
+        color: var(--terra);
+        font-size: 0.7rem;
+      }
+      @keyframes tickerMove {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
 
-    /* ══════════════════════════════════════════
+      /* ══════════════════════════════════════════
        ABOUT
     ══════════════════════════════════════════ */
-    #about { background: var(--white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-    .about-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 72px; align-items: start; }
-    .about-text { }
-    .about-text p { color: var(--muted); margin-bottom: 14px; line-height: 1.84; font-size: .975rem; }
-    .about-text strong { color: var(--ink-2); font-weight: 600; }
-    .about-items { display: flex; flex-direction: column; gap: 10px; margin-top: 30px; }
-    .a-row {
-      display: flex; align-items: flex-start; gap: 14px;
-      padding: 14px 16px; border-radius: var(--r);
-      border: 1px solid var(--border); background: var(--cream);
-      transition: var(--ease);
-    }
-    .a-row:hover { border-color: var(--terra-bdr); background: var(--terra-tint); }
-    .a-ic {
-      width: 34px; height: 34px; border-radius: 7px;
-      background: var(--terra); color: #fff;
-      display: flex; align-items: center; justify-content: center; font-size: .8rem; flex-shrink: 0;
-    }
-    .a-h { font-size: .875rem; font-weight: 700; color: var(--ink); margin-bottom: 2px; }
-    .a-p { font-size: .78rem; color: var(--muted); }
+      #about {
+        background: var(--white);
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+      }
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;
+        gap: 72px;
+        align-items: start;
+      }
+      .about-text {
+      }
+      .about-text p {
+        color: var(--muted);
+        margin-bottom: 14px;
+        line-height: 1.84;
+        font-size: 0.975rem;
+      }
+      .about-text strong {
+        color: var(--ink-2);
+        font-weight: 600;
+      }
+      .about-items {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 30px;
+      }
+      .a-row {
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+        padding: 14px 16px;
+        border-radius: var(--r);
+        border: 1px solid var(--border);
+        background: var(--cream);
+        transition: var(--ease);
+      }
+      .a-row:hover {
+        border-color: var(--terra-bdr);
+        background: var(--terra-tint);
+      }
+      .a-ic {
+        width: 34px;
+        height: 34px;
+        border-radius: 7px;
+        background: var(--terra);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.8rem;
+        flex-shrink: 0;
+      }
+      .a-h {
+        font-size: 0.875rem;
+        font-weight: 700;
+        color: var(--ink);
+        margin-bottom: 2px;
+      }
+      .a-p {
+        font-size: 0.78rem;
+        color: var(--muted);
+      }
 
-    .cert-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 10px; }
-    .cert-c {
-      padding: 14px 15px; border-radius: var(--r);
-      border: 1px solid var(--border); background: var(--cream);
-      transition: var(--ease); cursor: default;
-    }
-    .cert-c:hover { border-color: var(--terra-bdr); box-shadow: var(--shadow-sm); }
-    .cert-c i { color: var(--terra); font-size: 1rem; margin-bottom: 7px; display: block; }
-    .cert-c h5 { font-size: .8rem; font-weight: 700; color: var(--ink); line-height: 1.35; }
-    .cert-c p  { font-size: .72rem; color: var(--muted); margin-top: 3px; }
+      .cert-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+      .cert-c {
+        padding: 14px 15px;
+        border-radius: var(--r);
+        border: 1px solid var(--border);
+        background: var(--cream);
+        transition: var(--ease);
+        cursor: default;
+      }
+      .cert-c:hover {
+        border-color: var(--terra-bdr);
+        box-shadow: var(--shadow-sm);
+      }
+      .cert-c i {
+        color: var(--terra);
+        font-size: 1rem;
+        margin-bottom: 7px;
+        display: block;
+      }
+      .cert-c h5 {
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: var(--ink);
+        line-height: 1.35;
+      }
+      .cert-c p {
+        font-size: 0.72rem;
+        color: var(--muted);
+        margin-top: 3px;
+      }
 
-    /* ══════════════════════════════════════════
+      /* ══════════════════════════════════════════
        SKILLS
     ══════════════════════════════════════════ */
-    #skills { background: var(--cream); }
-    .skills-grid {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(264px,1fr));
-      gap: 16px; margin-top: 52px;
-    }
-    .sk-card {
-      background: var(--white); border: 1px solid var(--border);
-      border-radius: var(--rl); padding: 26px; transition: var(--ease);
-      position: relative; overflow: hidden;
-    }
-    .sk-card::after {
-      content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
-      background: var(--terra); transform: scaleX(0); transition: transform .3s ease; transform-origin: left;
-    }
-    .sk-card:hover::after { transform: scaleX(1); }
-    .sk-card:hover { border-color: var(--terra-bdr); box-shadow: var(--shadow); transform: translateY(-4px); }
-    .sk-ic {
-      width: 40px; height: 40px; border-radius: 8px;
-      background: var(--terra); color: #fff;
-      display: flex; align-items: center; justify-content: center; font-size: .9rem;
-      margin-bottom: 14px;
-    }
-    .sk-ic.navy  { background: var(--navy); }
-    .sk-ic.green { background: var(--green); }
-    .sk-title { font-size: .9rem; font-weight: 800; color: var(--ink); margin-bottom: 14px; }
-    .sk-tags { display: flex; flex-wrap: wrap; gap: 6px; }
-    .sk-tag {
-      padding: 3px 10px; border-radius: 4px; font-size: .71rem; font-weight: 600;
-      border: 1px solid var(--border); color: var(--ink-2); background: var(--cream);
-      transition: var(--ease);
-    }
-    .sk-tag:hover { border-color: var(--terra-bdr); color: var(--terra); background: var(--terra-tint); }
+      #skills {
+        background: var(--cream);
+      }
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(264px, 1fr));
+        gap: 16px;
+        margin-top: 52px;
+      }
+      .sk-card {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: var(--rl);
+        padding: 26px;
+        transition: var(--ease);
+        position: relative;
+        overflow: hidden;
+      }
+      .sk-card::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: var(--terra);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+        transform-origin: left;
+      }
+      .sk-card:hover::after {
+        transform: scaleX(1);
+      }
+      .sk-card:hover {
+        border-color: var(--terra-bdr);
+        box-shadow: var(--shadow);
+        transform: translateY(-4px);
+      }
+      .sk-ic {
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        background: var(--terra);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.9rem;
+        margin-bottom: 14px;
+      }
+      .sk-ic.navy {
+        background: var(--navy);
+      }
+      .sk-ic.green {
+        background: var(--green);
+      }
+      .sk-title {
+        font-size: 0.9rem;
+        font-weight: 800;
+        color: var(--ink);
+        margin-bottom: 14px;
+      }
+      .sk-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+      .sk-tag {
+        padding: 3px 10px;
+        border-radius: 4px;
+        font-size: 0.71rem;
+        font-weight: 600;
+        border: 1px solid var(--border);
+        color: var(--ink-2);
+        background: var(--cream);
+        transition: var(--ease);
+      }
+      .sk-tag:hover {
+        border-color: var(--terra-bdr);
+        color: var(--terra);
+        background: var(--terra-tint);
+      }
 
-    .platform-note {
-      margin-top: 30px; padding: 22px 26px;
-      background: var(--white); border: 1px solid var(--border);
-      border-left: 3px solid var(--terra); border-radius: var(--r);
-      display: flex; align-items: flex-start; gap: 14px;
-    }
-    .platform-note i { color: var(--terra); margin-top: 2px; flex-shrink: 0; font-size: 1rem; }
-    .platform-note p { font-size: .875rem; color: var(--muted); line-height: 1.78; }
-    .platform-note strong { color: var(--ink-2); font-weight: 700; }
+      .platform-note {
+        margin-top: 30px;
+        padding: 22px 26px;
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-left: 3px solid var(--terra);
+        border-radius: var(--r);
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+      }
+      .platform-note i {
+        color: var(--terra);
+        margin-top: 2px;
+        flex-shrink: 0;
+        font-size: 1rem;
+      }
+      .platform-note p {
+        font-size: 0.875rem;
+        color: var(--muted);
+        line-height: 1.78;
+      }
+      .platform-note strong {
+        color: var(--ink-2);
+        font-weight: 700;
+      }
 
-    /* ══════════════════════════════════════════
+      /* ══════════════════════════════════════════
        PROJECTS
     ══════════════════════════════════════════ */
-    #projects { background: var(--white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-    .proj-top {
-      display: flex; align-items: flex-end; justify-content: space-between;
-      flex-wrap: wrap; gap: 24px; margin-bottom: 44px;
-    }
-    .filter-row { display: flex; gap: 6px; flex-wrap: wrap; }
-    .fbtn {
-      padding: 7px 18px; border-radius: 4px; font-size: .78rem; font-weight: 700;
-      background: var(--cream); border: 1px solid var(--border);
-      color: var(--muted); cursor: pointer; transition: var(--ease); letter-spacing: .01em;
-    }
-    .fbtn:hover { border-color: var(--terra-bdr); color: var(--terra); background: var(--terra-tint); }
-    .fbtn.on { background: var(--terra); border-color: var(--terra); color: #fff; }
+      #projects {
+        background: var(--white);
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+      }
+      .proj-top {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 24px;
+        margin-bottom: 44px;
+      }
+      .filter-row {
+        display: flex;
+        gap: 6px;
+        flex-wrap: wrap;
+      }
+      .fbtn {
+        padding: 7px 18px;
+        border-radius: 4px;
+        font-size: 0.78rem;
+        font-weight: 700;
+        background: var(--cream);
+        border: 1px solid var(--border);
+        color: var(--muted);
+        cursor: pointer;
+        transition: var(--ease);
+        letter-spacing: 0.01em;
+      }
+      .fbtn:hover {
+        border-color: var(--terra-bdr);
+        color: var(--terra);
+        background: var(--terra-tint);
+      }
+      .fbtn.on {
+        background: var(--terra);
+        border-color: var(--terra);
+        color: #fff;
+      }
 
-    .proj-grid {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(326px,1fr));
-      gap: 22px;
-    }
-    .proj-card {
-      background: var(--white); border: 1px solid var(--border);
-      border-radius: var(--rl); overflow: hidden;
-      transition: var(--ease); display: flex; flex-direction: column;
-    }
-    .proj-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); border-color: var(--terra-bdr); }
+      .proj-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(326px, 1fr));
+        gap: 22px;
+      }
+      .proj-card {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: var(--rl);
+        overflow: hidden;
+        transition: var(--ease);
+        display: flex;
+        flex-direction: column;
+      }
+      .proj-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lg);
+        border-color: var(--terra-bdr);
+      }
 
-    /* thumb */
-    .pc-thumb {
-      height: 186px; position: relative; overflow: hidden;
-      display: flex; align-items: center; justify-content: center;
-    }
-    .pc-thumb-in {
-      display: flex; flex-direction: column; align-items: center;
-      justify-content: center; gap: 10px; z-index: 1; position: relative;
-    }
-    .pc-thumb-in i { font-size: 2.6rem; color: rgba(255,255,255,.82); }
-    .site-url { font-size: .7rem; font-weight: 700; color: rgba(255,255,255,.5); letter-spacing: .07em; }
-    .pc-ov {
-      position: absolute; inset: 0;
-      background: rgba(12,24,38,.8);
-      display: flex; align-items: center; justify-content: center; gap: 10px;
-      opacity: 0; transition: var(--ease); z-index: 2;
-    }
-    .proj-card:hover .pc-ov { opacity: 1; }
-    .pc-ov a {
-      width: 40px; height: 40px; border-radius: var(--r);
-      background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.3);
-      color: #fff; display: flex; align-items: center; justify-content: center;
-      font-size: .9rem; transition: var(--ease);
-    }
-    .pc-ov a:hover { background: var(--terra); border-color: var(--terra); }
-    .pc-bdg {
-      position: absolute; top: 12px; left: 12px; z-index: 3;
-      padding: 3px 10px; border-radius: 4px; font-size: .67rem;
-      font-weight: 800; letter-spacing: .07em; text-transform: uppercase; color: #fff;
-    }
-    .live-pill {
-      position: absolute; top: 12px; right: 12px; z-index: 3;
-      display: flex; align-items: center; gap: 5px;
-      background: rgba(201,76,40,.85); border-radius: 4px;
-      padding: 3px 9px; font-size: .66rem; font-weight: 700; color: #fff;
-    }
-    .live-pill::before {
-      content: ''; width: 5px; height: 5px; border-radius: 50%;
-      background: rgba(255,255,255,.9); animation: lp 1.8s infinite;
-    }
-    @keyframes lp { 0%,100%{opacity:1} 50%{opacity:.25} }
+      /* thumb */
+      .pc-thumb {
+        height: 186px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .pc-thumb-in {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        z-index: 1;
+        position: relative;
+      }
+      .pc-thumb-in i {
+        font-size: 2.6rem;
+        color: rgba(255, 255, 255, 0.82);
+      }
+      .site-url {
+        font-size: 0.7rem;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.5);
+        letter-spacing: 0.07em;
+      }
+      .pc-ov {
+        position: absolute;
+        inset: 0;
+        background: rgba(12, 24, 38, 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        opacity: 0;
+        transition: var(--ease);
+        z-index: 2;
+      }
+      .proj-card:hover .pc-ov {
+        opacity: 1;
+      }
+      .pc-ov a {
+        width: 40px;
+        height: 40px;
+        border-radius: var(--r);
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.9rem;
+        transition: var(--ease);
+      }
+      .pc-ov a:hover {
+        background: var(--terra);
+        border-color: var(--terra);
+      }
+      .pc-bdg {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        z-index: 3;
+        padding: 3px 10px;
+        border-radius: 4px;
+        font-size: 0.67rem;
+        font-weight: 800;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        color: #fff;
+      }
+      .live-pill {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        z-index: 3;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        background: rgba(201, 76, 40, 0.85);
+        border-radius: 4px;
+        padding: 3px 9px;
+        font-size: 0.66rem;
+        font-weight: 700;
+        color: #fff;
+      }
+      .live-pill::before {
+        content: "";
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.9);
+        animation: lp 1.8s infinite;
+      }
+      @keyframes lp {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.25;
+        }
+      }
 
-    .th-navy   { background: #1d3d5c; }
-    .th-teal   { background: #0d4f4b; }
-    .th-forest { background: #1e4730; }
-    .th-wine   { background: #5a1e2e; }
-    .th-slate  { background: #2d3f52; }
-    .th-cognac { background: #6b3d1a; }
-    .th-sage   { background: #2d4a3e; }
-    .th-dusk   { background: #2c2a4a; }
-    .th-maroon { background: #4a1e1e; }
-    .th-iron   { background: #333333; }
-    .th-terra  { background: #8b3218; }
+      .th-navy {
+        background: #1d3d5c;
+      }
+      .th-teal {
+        background: #0d4f4b;
+      }
+      .th-forest {
+        background: #1e4730;
+      }
+      .th-wine {
+        background: #5a1e2e;
+      }
+      .th-slate {
+        background: #2d3f52;
+      }
+      .th-cognac {
+        background: #6b3d1a;
+      }
+      .th-sage {
+        background: #2d4a3e;
+      }
+      .th-dusk {
+        background: #2c2a4a;
+      }
+      .th-maroon {
+        background: #4a1e1e;
+      }
+      .th-iron {
+        background: #333333;
+      }
+      .th-terra {
+        background: #8b3218;
+      }
 
-    /* card body */
-    .pc-body { padding: 20px 22px; flex: 1; display: flex; flex-direction: column; }
-    .pc-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 10px; }
-    .pc-title { font-size: 1rem; font-weight: 800; color: var(--ink); margin-bottom: 7px; }
-    .pc-desc  { font-size: .82rem; color: var(--muted); flex: 1; line-height: 1.72; }
-    .pc-foot  {
-      display: flex; align-items: center; justify-content: space-between;
-      margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--border);
-    }
-    .pc-links { display: flex; gap: 14px; }
-    .pc-lnk {
-      display: flex; align-items: center; gap: 5px;
-      font-size: .77rem; font-weight: 700; color: var(--muted); transition: var(--ease);
-    }
-    .pc-lnk:hover { color: var(--terra); }
-    .pc-meta { font-size: .72rem; color: var(--subtle); font-weight: 500; }
+      /* card body */
+      .pc-body {
+        padding: 20px 22px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      .pc-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        margin-bottom: 10px;
+      }
+      .pc-title {
+        font-size: 1rem;
+        font-weight: 800;
+        color: var(--ink);
+        margin-bottom: 7px;
+      }
+      .pc-desc {
+        font-size: 0.82rem;
+        color: var(--muted);
+        flex: 1;
+        line-height: 1.72;
+      }
+      .pc-foot {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 16px;
+        padding-top: 14px;
+        border-top: 1px solid var(--border);
+      }
+      .pc-links {
+        display: flex;
+        gap: 14px;
+      }
+      .pc-lnk {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 0.77rem;
+        font-weight: 700;
+        color: var(--muted);
+        transition: var(--ease);
+      }
+      .pc-lnk:hover {
+        color: var(--terra);
+      }
+      .pc-meta {
+        font-size: 0.72rem;
+        color: var(--subtle);
+        font-weight: 500;
+      }
 
-    /* ══════════════════════════════════════════
+      /* ══════════════════════════════════════════
        EXPERIENCE
     ══════════════════════════════════════════ */
-    #experience { background: var(--cream); }
-    .exp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-top: 52px; }
-    .col-head {
-      font-size: .82rem; font-weight: 800; color: var(--ink);
-      margin-bottom: 22px; display: flex; align-items: center; gap: 8px;
-      padding-bottom: 14px; border-bottom: 1px solid var(--border);
-      text-transform: uppercase; letter-spacing: .06em;
-    }
-    .col-head i { color: var(--terra); }
-    .tl { position: relative; padding-top: 4px; }
-    .tl::before {
-      content: ''; position: absolute; left: 11px; top: 10px; bottom: 10px;
-      width: 1px; background: var(--border-2);
-    }
-    .tl-item { position: relative; padding-left: 38px; margin-bottom: 18px; }
-    .tl-dot {
-      position: absolute; left: 0; top: 6px; width: 24px; height: 24px;
-      border-radius: 50%; background: var(--white); border: 1.5px solid var(--terra-bdr);
-      display: flex; align-items: center; justify-content: center;
-      font-size: .58rem; color: var(--terra);
-    }
-    .tl-box {
-      background: var(--white); border: 1px solid var(--border);
-      border-radius: var(--r); padding: 16px 18px; transition: var(--ease);
-    }
-    .tl-box:hover { border-color: var(--terra-bdr); box-shadow: var(--shadow-sm); }
-    .tl-period { font-size: .68rem; font-weight: 800; color: var(--terra); letter-spacing: .08em; text-transform: uppercase; margin-bottom: 3px; }
-    .tl-title  { font-size: .875rem; font-weight: 800; color: var(--ink); margin-bottom: 1px; }
-    .tl-org    { font-size: .775rem; color: var(--muted); margin-bottom: 8px; }
-    .tl-desc   { font-size: .78rem; color: var(--muted); line-height: 1.72; }
-    .tl-desc li { margin-left: 14px; margin-top: 3px; }
+      #experience {
+        background: var(--cream);
+      }
+      .exp-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        margin-top: 52px;
+      }
+      .col-head {
+        font-size: 0.82rem;
+        font-weight: 800;
+        color: var(--ink);
+        margin-bottom: 22px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding-bottom: 14px;
+        border-bottom: 1px solid var(--border);
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+      }
+      .col-head i {
+        color: var(--terra);
+      }
+      .tl {
+        position: relative;
+        padding-top: 4px;
+      }
+      .tl::before {
+        content: "";
+        position: absolute;
+        left: 11px;
+        top: 10px;
+        bottom: 10px;
+        width: 1px;
+        background: var(--border-2);
+      }
+      .tl-item {
+        position: relative;
+        padding-left: 38px;
+        margin-bottom: 18px;
+      }
+      .tl-dot {
+        position: absolute;
+        left: 0;
+        top: 6px;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: var(--white);
+        border: 1.5px solid var(--terra-bdr);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.58rem;
+        color: var(--terra);
+      }
+      .tl-box {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: var(--r);
+        padding: 16px 18px;
+        transition: var(--ease);
+      }
+      .tl-box:hover {
+        border-color: var(--terra-bdr);
+        box-shadow: var(--shadow-sm);
+      }
+      .tl-period {
+        font-size: 0.68rem;
+        font-weight: 800;
+        color: var(--terra);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 3px;
+      }
+      .tl-title {
+        font-size: 0.875rem;
+        font-weight: 800;
+        color: var(--ink);
+        margin-bottom: 1px;
+      }
+      .tl-org {
+        font-size: 0.775rem;
+        color: var(--muted);
+        margin-bottom: 8px;
+      }
+      .tl-desc {
+        font-size: 0.78rem;
+        color: var(--muted);
+        line-height: 1.72;
+      }
+      .tl-desc li {
+        margin-left: 14px;
+        margin-top: 3px;
+      }
 
-    /* ══════════════════════════════════════════
+      /* ══════════════════════════════════════════
        SERVICES
     ══════════════════════════════════════════ */
-    #services { background: var(--white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-    .srv-grid {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(252px,1fr));
-      gap: 16px; margin-top: 52px;
-    }
-    .srv-card {
-      background: var(--cream); border: 1px solid var(--border);
-      border-radius: var(--rl); padding: 28px; transition: var(--ease);
-      position: relative; cursor: default;
-    }
-    .srv-card:hover { border-color: var(--terra-bdr); box-shadow: var(--shadow); transform: translateY(-4px); }
-    .srv-num {
-      position: absolute; top: 16px; right: 18px;
-      font-size: 2.4rem; font-weight: 900; color: var(--border);
-      line-height: 1; font-variant-numeric: tabular-nums;
-    }
-    .srv-ic {
-      width: 44px; height: 44px; border-radius: 9px;
-      background: var(--terra); color: #fff;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1rem; margin-bottom: 16px; transition: var(--ease);
-    }
-    .srv-card:hover .srv-ic { background: var(--navy); }
-    .srv-title { font-size: .9rem; font-weight: 800; color: var(--ink); margin-bottom: 9px; }
-    .srv-desc  { font-size: .81rem; color: var(--muted); line-height: 1.75; }
+      #services {
+        background: var(--white);
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+      }
+      .srv-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(252px, 1fr));
+        gap: 16px;
+        margin-top: 52px;
+      }
+      .srv-card {
+        background: var(--cream);
+        border: 1px solid var(--border);
+        border-radius: var(--rl);
+        padding: 28px;
+        transition: var(--ease);
+        position: relative;
+        cursor: default;
+      }
+      .srv-card:hover {
+        border-color: var(--terra-bdr);
+        box-shadow: var(--shadow);
+        transform: translateY(-4px);
+      }
+      .srv-num {
+        position: absolute;
+        top: 16px;
+        right: 18px;
+        font-size: 2.4rem;
+        font-weight: 900;
+        color: var(--border);
+        line-height: 1;
+        font-variant-numeric: tabular-nums;
+      }
+      .srv-ic {
+        width: 44px;
+        height: 44px;
+        border-radius: 9px;
+        background: var(--terra);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        margin-bottom: 16px;
+        transition: var(--ease);
+      }
+      .srv-card:hover .srv-ic {
+        background: var(--navy);
+      }
+      .srv-title {
+        font-size: 0.9rem;
+        font-weight: 800;
+        color: var(--ink);
+        margin-bottom: 9px;
+      }
+      .srv-desc {
+        font-size: 0.81rem;
+        color: var(--muted);
+        line-height: 1.75;
+      }
 
-    /* ══════════════════════════════════════════
+      /* ══════════════════════════════════════════
        CONTACT — dark split
     ══════════════════════════════════════════ */
-    #contact {
-      background: var(--navy-2);
-      position: relative; overflow: hidden;
-    }
-    #contact::before {
-      content: 'HELLO.'; position: absolute;
-      bottom: -40px; right: -40px;
-      font-family: 'Playfair Display', serif;
-      font-size: 18rem; font-weight: 900; line-height: 1;
-      color: rgba(255,255,255,.028); pointer-events: none;
-      letter-spacing: -.04em;
-    }
-    .contact-in { max-width: 680px; margin: 0 auto; text-align: center; position: relative; }
-    .contact-in .eyebrow { color: rgba(245,242,237,.35); }
-    .contact-in .eyebrow::before { background: var(--terra); }
-    .contact-in .eyebrow { margin-bottom: 20px; }
-    .contact-h {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900;
-      color: #f5f2ed; margin-bottom: 16px; line-height: 1.1;
-    }
-    .contact-h em { font-style: italic; color: var(--terra); }
-    .contact-sub { color: rgba(245,242,237,.48); font-size: 1rem; line-height: 1.78; margin-bottom: 44px; }
-    .contact-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
-    .c-lnk {
-      display: flex; align-items: center; gap: 9px;
-      background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.12);
-      padding: 11px 20px; border-radius: var(--r);
-      font-size: .85rem; font-weight: 600; color: rgba(245,242,237,.8); transition: var(--ease);
-    }
-    .c-lnk i { color: var(--terra); }
-    .c-lnk:hover { background: var(--terra); border-color: var(--terra); color: #fff; }
-    .c-lnk:hover i { color: #fff; }
+      #contact {
+        background: var(--navy-2);
+        position: relative;
+        overflow: hidden;
+      }
+      #contact::before {
+        content: "HELLO.";
+        position: absolute;
+        bottom: -40px;
+        right: -40px;
+        font-family: "Playfair Display", serif;
+        font-size: 18rem;
+        font-weight: 900;
+        line-height: 1;
+        color: rgba(255, 255, 255, 0.028);
+        pointer-events: none;
+        letter-spacing: -0.04em;
+      }
+      .contact-in {
+        max-width: 680px;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+      }
+      .contact-in .eyebrow {
+        color: rgba(245, 242, 237, 0.35);
+      }
+      .contact-in .eyebrow::before {
+        background: var(--terra);
+      }
+      .contact-in .eyebrow {
+        margin-bottom: 20px;
+      }
+      .contact-h {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        font-weight: 900;
+        color: #f5f2ed;
+        margin-bottom: 16px;
+        line-height: 1.1;
+      }
+      .contact-h em {
+        font-style: italic;
+        color: var(--terra);
+      }
+      .contact-sub {
+        color: rgba(245, 242, 237, 0.48);
+        font-size: 1rem;
+        line-height: 1.78;
+        margin-bottom: 44px;
+      }
+      .contact-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+      }
+      .c-lnk {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        background: rgba(255, 255, 255, 0.07);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        padding: 11px 20px;
+        border-radius: var(--r);
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: rgba(245, 242, 237, 0.8);
+        transition: var(--ease);
+      }
+      .c-lnk i {
+        color: var(--terra);
+      }
+      .c-lnk:hover {
+        background: var(--terra);
+        border-color: var(--terra);
+        color: #fff;
+      }
+      .c-lnk:hover i {
+        color: #fff;
+      }
 
-    /* ══════════════════════════════════════════
+      /* ══════════════════════════════════════════
        FOOTER
     ══════════════════════════════════════════ */
-    footer {
-      background: #0f1e2d; border-top: 1px solid rgba(255,255,255,.06);
-      padding: 32px; text-align: center;
-    }
-    .foot-in { max-width: 1140px; margin: 0 auto; }
-    .foot-logo { font-size: .85rem; font-weight: 800; color: rgba(245,242,237,.7); margin-bottom: 14px; }
-    .foot-logo span { color: var(--terra); }
-    .foot-soc { display: flex; justify-content: center; gap: 10px; margin-bottom: 16px; }
-    .foot-soc a {
-      width: 34px; height: 34px; border-radius: 7px;
-      display: flex; align-items: center; justify-content: center;
-      border: 1px solid rgba(255,255,255,.1); color: rgba(255,255,255,.35);
-      font-size: .8rem; transition: var(--ease);
-    }
-    .foot-soc a:hover { border-color: var(--terra); color: var(--terra); transform: translateY(-2px); }
-    footer p { font-size: .76rem; color: rgba(255,255,255,.25); }
+      footer {
+        background: #0f1e2d;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+        padding: 32px;
+        text-align: center;
+      }
+      .foot-in {
+        max-width: 1140px;
+        margin: 0 auto;
+      }
+      .foot-logo {
+        font-size: 0.85rem;
+        font-weight: 800;
+        color: rgba(245, 242, 237, 0.7);
+        margin-bottom: 14px;
+      }
+      .foot-logo span {
+        color: var(--terra);
+      }
+      .foot-soc {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 16px;
+      }
+      .foot-soc a {
+        width: 34px;
+        height: 34px;
+        border-radius: 7px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: rgba(255, 255, 255, 0.35);
+        font-size: 0.8rem;
+        transition: var(--ease);
+      }
+      .foot-soc a:hover {
+        border-color: var(--terra);
+        color: var(--terra);
+        transform: translateY(-2px);
+      }
+      footer p {
+        font-size: 0.76rem;
+        color: rgba(255, 255, 255, 0.25);
+      }
 
-    /* ══════════════════════════════════════════
+      /* ══════════════════════════════════════════
        RESPONSIVE
     ══════════════════════════════════════════ */
-    @media (max-width: 1024px) {
-      .hero-grid  { grid-template-columns: 1fr; }
-      .profile-card { display: none; }
-      .about-grid { grid-template-columns: 1fr; }
-      .exp-grid   { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 768px) {
-      .nav-links, .nav-links ~ .btn { display: none; }
-      .hamburger { display: flex; }
-      .section { padding: 68px 0; }
-      .hero-h { font-size: clamp(2.4rem, 9vw, 3.5rem); }
-    }
-    @media (max-width: 480px) {
-      .proj-grid, .srv-grid, .skills-grid { grid-template-columns: 1fr; }
-      .cert-grid { grid-template-columns: 1fr; }
-      .container { padding: 0 20px; }
-    }
-  </style>
-</head>
-<body>
+      @media (max-width: 1024px) {
+        .hero-grid {
+          grid-template-columns: 1fr;
+        }
+        .profile-card {
+          display: none;
+        }
+        .about-grid {
+          grid-template-columns: 1fr;
+        }
+        .exp-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 768px) {
+        .nav-links,
+        .nav-links ~ .btn {
+          display: none;
+        }
+        .hamburger {
+          display: flex;
+        }
+        .section {
+          padding: 68px 0;
+        }
+        .hero-h {
+          font-size: clamp(2.4rem, 9vw, 3.5rem);
+        }
+      }
+      @media (max-width: 480px) {
+        .proj-grid,
+        .srv-grid,
+        .skills-grid {
+          grid-template-columns: 1fr;
+        }
+        .cert-grid {
+          grid-template-columns: 1fr;
+        }
+        .container {
+          padding: 0 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ── NAV ─────────────────────────────────── -->
+    <nav id="nav">
+      <div class="nav-in">
+        <a href="#hero" class="nav-logo">Miguel<span>.</span></a>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#services">Services</a></li>
+        </ul>
+        <a
+          href="#contact"
+          class="btn btn-terra"
+          style="font-size: 0.8rem; padding: 9px 20px"
+        >
+          <i class="fa-solid fa-paper-plane"></i> Let's Talk
+        </a>
+        <button class="hamburger" id="hb" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+    <ul class="mob-nav" id="mn">
+      <li><a href="#about" class="ml">About</a></li>
+      <li><a href="#skills" class="ml">Skills</a></li>
+      <li><a href="#projects" class="ml">Projects</a></li>
+      <li><a href="#experience" class="ml">Experience</a></li>
+      <li><a href="#services" class="ml">Services</a></li>
+      <li><a href="#contact" class="ml">Contact</a></li>
+    </ul>
 
-  <!-- ── NAV ─────────────────────────────────── -->
-  <nav id="nav">
-    <div class="nav-in">
-      <a href="#hero" class="nav-logo">Miguel<span>.</span></a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#services">Services</a></li>
-      </ul>
-      <a href="#contact" class="btn btn-terra" style="font-size:.8rem;padding:9px 20px;">
-        <i class="fa-solid fa-paper-plane"></i> Let's Talk
-      </a>
-      <button class="hamburger" id="hb" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+    <!-- ── HERO ────────────────────────────────── -->
+    <section id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Left copy -->
+          <div>
+            <div class="hero-tag">
+              <i class="fa-solid fa-circle-check"></i> Available for new
+              projects
+            </div>
+            <h1 class="hero-h">
+              Building websites<br />
+              people <span class="u">actually</span><br />
+              want to visit.
+            </h1>
+            <p class="hero-desc">
+              I'm <strong>Miguel Sanchez</strong> — bilingual website designer
+              and developer. B.Sc. Computer Science. 4+ years building
+              responsive, SEO-optimized web experiences with WordPress,
+              Elementor, HTML/CSS/JS, and more.
+            </p>
+            <div class="hero-chips">
+              <span class="tag t-terra"
+                ><i class="fa-brands fa-wordpress"></i> WordPress &amp;
+                Elementor</span
+              >
+              <span class="tag t-navy"
+                ><i class="fa-solid fa-code"></i> HTML / CSS / JS</span
+              >
+              <span class="tag t-ink"
+                ><i class="fa-solid fa-magnifying-glass"></i> SEO &amp;
+                AIO</span
+              >
+            </div>
+            <div class="hero-btns">
+              <a href="#projects" class="btn btn-terra"
+                ><i class="fa-solid fa-layer-group"></i> View My Work</a
+              >
+              <a href="#contact" class="btn btn-ghost"
+                ><i class="fa-solid fa-envelope"></i> Get In Touch</a
+              >
+            </div>
+            <div class="hero-socials">
+              <a
+                href="https://www.linkedin.com/in/coto64/"
+                target="_blank"
+                rel="noopener"
+                aria-label="LinkedIn"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+              <a
+                href="https://github.com/MiguelSanchezCuello"
+                target="_blank"
+                rel="noopener"
+                aria-label="GitHub"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <a href="mailto:miguelsc10@hotmail.com" aria-label="Email"
+                ><i class="fa-solid fa-envelope"></i
+              ></a>
+              <a
+                href="https://www.youtube.com/nomadaxable"
+                target="_blank"
+                rel="noopener"
+                aria-label="YouTube"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Right — dark profile card -->
+          <div class="profile-card">
+            <div class="pc-top">
+              <div class="pc-av">MS</div>
+              <div>
+                <div class="pc-name">Miguel Sanchez</div>
+                <div class="pc-role">Website Designer &amp; Developer</div>
+              </div>
+            </div>
+            <div class="pc-stats">
+              <div class="pstat">
+                <div class="pstat-n">4+</div>
+                <div class="pstat-l">Yrs Web Dev</div>
+              </div>
+              <div class="pstat">
+                <div class="pstat-n">10+</div>
+                <div class="pstat-l">Projects</div>
+              </div>
+              <div class="pstat">
+                <div class="pstat-n">BSc</div>
+                <div class="pstat-l">Comp. Sci.</div>
+              </div>
+            </div>
+            <div class="pc-bars">
+              <div class="pb-row">
+                <span class="pb-l">HTML / CSS</span>
+                <div class="pb-tr">
+                  <div class="pb-f" style="width: 95%"></div>
+                </div>
+                <span class="pb-pct">95%</span>
+              </div>
+              <div class="pb-row">
+                <span class="pb-l">WordPress</span>
+                <div class="pb-tr">
+                  <div class="pb-f" style="width: 82%"></div>
+                </div>
+                <span class="pb-pct">82%</span>
+              </div>
+              <div class="pb-row">
+                <span class="pb-l">JavaScript</span>
+                <div class="pb-tr">
+                  <div class="pb-f" style="width: 78%"></div>
+                </div>
+                <span class="pb-pct">78%</span>
+              </div>
+              <div class="pb-row">
+                <span class="pb-l">SEO / AIO</span>
+                <div class="pb-tr">
+                  <div class="pb-f" style="width: 80%"></div>
+                </div>
+                <span class="pb-pct">80%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SKILLS TICKER ────────────────────────── -->
+    <div class="ticker-strip" aria-hidden="true">
+      <div class="ticker-track">
+        <div class="ticker-inner" id="ticker">
+          <div class="tk-item">
+            <span>WordPress</span><i class="fa-solid fa-diamond"></i>
+          </div>
+          <div class="tk-item">
+            <span>Elementor</span><i class="fa-solid fa-diamond"></i>
+          </div>
+          <div class="tk-item">
+            <span>HTML5 &amp; CSS3</span><i class="fa-solid fa-diamond"></i>
+          </div>
+          <div class="tk-item">
+            <span>JavaScript</span><i class="fa-solid fa-diamond"></i>
+          </div>
+          <div class="tk-item">
+            <span>Responsive Design</span><i class="fa-solid fa-diamond"></i>
+          </div>
+          <div class="tk-item">
+            <span>SEO &amp; AIO</span><i class="fa-solid fa-diamond"></i>
+          </div>
+          <div class="tk-item">
+            <span>Angular 17</span><i class="fa-solid fa-diamond"></i>
+          </div>
+          <div class="tk-item">
+            <span>Adobe Photoshop</span><i class="fa-solid fa-diamond"></i>
+          </div>
+          <div class="tk-item">
+            <span>WooCommerce</span><i class="fa-solid fa-diamond"></i>
+          </div>
+          <div class="tk-item">
+            <span>PHP</span><i class="fa-solid fa-diamond"></i>
+          </div>
+          <div class="tk-item">
+            <span>Duda / Visual Editors</span
+            ><i class="fa-solid fa-diamond"></i>
+          </div>
+          <div class="tk-item">
+            <span>Core Web Vitals</span><i class="fa-solid fa-diamond"></i>
+          </div>
+          <!-- duplicate for seamless loop -->
+          <div class="tk-item">
+            <span>WordPress</span><i class="fa-solid fa-diamond"></i>
+          </div>
+          <div class="tk-item">
+            <span>Elementor</span><i class="fa-solid fa-diamond"></i>
+          </div>
+          <div class="tk-item">
+            <span>HTML5 &amp; CSS3</span><i class="fa-solid fa-diamond"></i>
+          </div>
+          <div class="tk-item">
+            <span>JavaScript</span><i class="fa-solid fa-diamond"></i>
+          </div>
+          <div class="tk-item">
+            <span>Responsive Design</span><i class="fa-solid fa-diamond"></i>
+          </div>
+          <div class="tk-item">
+            <span>SEO &amp; AIO</span><i class="fa-solid fa-diamond"></i>
+          </div>
+          <div class="tk-item">
+            <span>Angular 17</span><i class="fa-solid fa-diamond"></i>
+          </div>
+          <div class="tk-item">
+            <span>Adobe Photoshop</span><i class="fa-solid fa-diamond"></i>
+          </div>
+          <div class="tk-item">
+            <span>WooCommerce</span><i class="fa-solid fa-diamond"></i>
+          </div>
+          <div class="tk-item">
+            <span>PHP</span><i class="fa-solid fa-diamond"></i>
+          </div>
+          <div class="tk-item">
+            <span>Duda / Visual Editors</span
+            ><i class="fa-solid fa-diamond"></i>
+          </div>
+          <div class="tk-item">
+            <span>Core Web Vitals</span><i class="fa-solid fa-diamond"></i>
+          </div>
+        </div>
+      </div>
     </div>
-  </nav>
-  <ul class="mob-nav" id="mn">
-    <li><a href="#about"      class="ml">About</a></li>
-    <li><a href="#skills"     class="ml">Skills</a></li>
-    <li><a href="#projects"   class="ml">Projects</a></li>
-    <li><a href="#experience" class="ml">Experience</a></li>
-    <li><a href="#services"   class="ml">Services</a></li>
-    <li><a href="#contact"    class="ml">Contact</a></li>
-  </ul>
 
-  <!-- ── HERO ────────────────────────────────── -->
-  <section id="hero">
-    <div class="container">
-      <div class="hero-grid">
+    <!-- ── ABOUT ────────────────────────────────── -->
+    <section id="about" class="section on-white" aria-labelledby="about-h">
+      <div class="container">
+        <div class="about-grid">
+          <div class="reveal">
+            <div class="eyebrow" style="margin-bottom: 18px">About Me</div>
+            <h2 id="about-h" class="display">
+              Detail-oriented. <em>Creative.</em> Always on time.
+            </h2>
+            <p>
+              I'm a bilingual (EN/ES) website designer and developer with a
+              <strong>B.Sc. in Computer Science</strong> and 4+ years of
+              freelance web experience. My professional foundation started early
+              — building inventory systems from scratch in 2004, studying
+              computer systems, and earning a degree that covers algorithms,
+              OOP, databases, and system design.
+            </p>
+            <p>
+              My years in Quality Assurance and client-facing roles are a
+              genuine advantage in web work: I write clearly, communicate
+              proactively, document precisely, and catch mistakes before anyone
+              else does. Clients get projects that are accurate, delivered on
+              time, and exactly what was agreed on.
+            </p>
+            <p>
+              I work across the full stack — from Elementor page builds to
+              custom HTML/CSS/JS, PHP, and Angular 17 — and I bring Photoshop
+              image editing and SEO optimization into every build from the
+              start.
+            </p>
+            <div class="about-items">
+              <div class="a-row">
+                <div class="a-ic">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div>
+                  <div class="a-h">B.Sc. Computer Science</div>
+                  <div class="a-p">
+                    Universidad Autónoma de Santo Domingo (UASD)
+                  </div>
+                </div>
+              </div>
+              <div class="a-row">
+                <div class="a-ic">
+                  <i class="fa-solid fa-earth-americas"></i>
+                </div>
+                <div>
+                  <div class="a-h">Bilingual — English &amp; Spanish</div>
+                  <div class="a-p">
+                    Dominican American Cultural Institute · Professionally
+                    certified
+                  </div>
+                </div>
+              </div>
+              <div class="a-row">
+                <div class="a-ic"><i class="fa-solid fa-shield-check"></i></div>
+                <div>
+                  <div class="a-h">QA &amp; Client Support Background</div>
+                  <div class="a-p">
+                    Precision, professional communication, and delivery
+                    discipline — built into everything I do
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-        <!-- Left copy -->
-        <div>
-          <div class="hero-tag"><i class="fa-solid fa-circle-check"></i> Available for new projects</div>
-          <h1 class="hero-h">
-            Building websites<br>
-            people <span class="u">actually</span><br>
-            want to visit.
-          </h1>
-          <p class="hero-desc">
-            I'm <strong>Miguel Sanchez</strong> — bilingual website designer and developer. B.Sc. Computer Science. 4+ years building responsive, SEO-optimized web experiences with WordPress, Elementor, HTML/CSS/JS, and more.
+          <div class="reveal d1">
+            <div
+              style="
+                font-size: 0.72rem;
+                font-weight: 800;
+                color: var(--muted);
+                margin-bottom: 16px;
+                text-transform: uppercase;
+                letter-spacing: 0.12em;
+              "
+            >
+              Certifications &amp; Training
+            </div>
+            <div class="cert-grid">
+              <div class="cert-c">
+                <i class="fa-solid fa-certificate"></i>
+                <h5>Responsive Web Design</h5>
+                <p>freeCodeCamp</p>
+              </div>
+              <div class="cert-c">
+                <i class="fa-brands fa-css3-alt"></i>
+                <h5>HTML, CSS &amp; JavaScript</h5>
+                <p>SOLOLEARN · CTC</p>
+              </div>
+              <div class="cert-c">
+                <i class="fa-solid fa-magnifying-glass-chart"></i>
+                <h5>SEO Specialist</h5>
+                <p>Search Engine Optimization</p>
+              </div>
+              <div class="cert-c">
+                <i class="fa-brands fa-php"></i>
+                <h5>PHP Programming</h5>
+                <p>INFOTEP</p>
+              </div>
+              <div class="cert-c">
+                <i class="fa-brands fa-adobe"></i>
+                <h5>Photoshop &amp; Graphic Design</h5>
+                <p>CTC</p>
+              </div>
+              <div class="cert-c">
+                <i class="fa-solid fa-bullhorn"></i>
+                <h5>Digital Marketing</h5>
+                <p>CTC · DeoLink</p>
+              </div>
+              <div class="cert-c">
+                <i class="fa-solid fa-chalkboard-user"></i>
+                <h5>Professional Educator</h5>
+                <p>INFOTEP Certified Trainer</p>
+              </div>
+              <div class="cert-c">
+                <i class="fa-solid fa-database"></i>
+                <h5>Data Analysis — Excel</h5>
+                <p>edX Education</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SKILLS ───────────────────────────────── -->
+    <section id="skills" class="section" aria-labelledby="skills-h">
+      <div class="container">
+        <div class="reveal">
+          <div class="eyebrow" style="margin-bottom: 18px">
+            Technical Skills
+          </div>
+          <h2 id="skills-h" class="display">
+            A full toolkit for<br /><em>modern web projects.</em>
+          </h2>
+          <p class="lead" style="max-width: 500px">
+            Every skill is grounded in real builds, formal certifications, and a
+            Computer Science degree.
           </p>
-          <div class="hero-chips">
-            <span class="tag t-terra"><i class="fa-brands fa-wordpress"></i> WordPress &amp; Elementor</span>
-            <span class="tag t-navy"><i class="fa-solid fa-code"></i> HTML / CSS / JS</span>
-            <span class="tag t-ink"><i class="fa-solid fa-magnifying-glass"></i> SEO &amp; AIO</span>
-          </div>
-          <div class="hero-btns">
-            <a href="#projects" class="btn btn-terra"><i class="fa-solid fa-layer-group"></i> View My Work</a>
-            <a href="#contact"  class="btn btn-ghost"><i class="fa-solid fa-envelope"></i> Get In Touch</a>
-          </div>
-          <div class="hero-socials">
-            <a href="https://www.linkedin.com/in/coto64/"          target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://github.com/MiguelSanchezCuello"       target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-            <a href="mailto:miguelsc10@hotmail.com"                 aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-            <a href="https://www.youtube.com/nomadaxable"           target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-          </div>
         </div>
-
-        <!-- Right — dark profile card -->
-        <div class="profile-card">
-          <div class="pc-top">
-            <div class="pc-av">MS</div>
-            <div>
-              <div class="pc-name">Miguel Sanchez</div>
-              <div class="pc-role">Website Designer &amp; Developer</div>
+        <div class="skills-grid">
+          <div class="sk-card reveal d1">
+            <div class="sk-ic"><i class="fa-solid fa-code"></i></div>
+            <div class="sk-title">Front-End Development</div>
+            <div class="sk-tags">
+              <span class="sk-tag">HTML5</span><span class="sk-tag">CSS3</span>
+              <span class="sk-tag">JavaScript</span
+              ><span class="sk-tag">Bootstrap</span>
+              <span class="sk-tag">jQuery</span
+              ><span class="sk-tag">Flexbox &amp; Grid</span>
+              <span class="sk-tag">Responsive Design</span>
             </div>
           </div>
-          <div class="pc-stats">
-            <div class="pstat"><div class="pstat-n">4+</div><div class="pstat-l">Yrs Web Dev</div></div>
-            <div class="pstat"><div class="pstat-n">10+</div><div class="pstat-l">Projects</div></div>
-            <div class="pstat"><div class="pstat-n">BSc</div><div class="pstat-l">Comp. Sci.</div></div>
+          <div class="sk-card reveal d2">
+            <div class="sk-ic navy"><i class="fa-brands fa-wordpress"></i></div>
+            <div class="sk-title">WordPress &amp; Page Builders</div>
+            <div class="sk-tags">
+              <span class="sk-tag">WordPress</span
+              ><span class="sk-tag">Elementor</span>
+              <span class="sk-tag">WooCommerce</span
+              ><span class="sk-tag">Custom Themes</span>
+              <span class="sk-tag">PHP Customization</span
+              ><span class="sk-tag">Plugin Integration</span>
+            </div>
           </div>
-          <div class="pc-bars">
-            <div class="pb-row"><span class="pb-l">HTML / CSS</span><div class="pb-tr"><div class="pb-f" style="width:95%"></div></div><span class="pb-pct">95%</span></div>
-            <div class="pb-row"><span class="pb-l">WordPress</span><div class="pb-tr"><div class="pb-f" style="width:82%"></div></div><span class="pb-pct">82%</span></div>
-            <div class="pb-row"><span class="pb-l">JavaScript</span><div class="pb-tr"><div class="pb-f" style="width:78%"></div></div><span class="pb-pct">78%</span></div>
-            <div class="pb-row"><span class="pb-l">SEO / AIO</span><div class="pb-tr"><div class="pb-f" style="width:80%"></div></div><span class="pb-pct">80%</span></div>
+          <div class="sk-card reveal d1">
+            <div class="sk-ic">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="sk-title">SEO &amp; AIO</div>
+            <div class="sk-tags">
+              <span class="sk-tag">On-Page SEO</span
+              ><span class="sk-tag">Technical SEO</span>
+              <span class="sk-tag">Schema / Structured Data</span>
+              <span class="sk-tag">Core Web Vitals</span>
+              <span class="sk-tag">AI Search Optimization</span>
+            </div>
+          </div>
+          <div class="sk-card reveal d2">
+            <div class="sk-ic green"><i class="fa-brands fa-adobe"></i></div>
+            <div class="sk-title">Design &amp; Image Editing</div>
+            <div class="sk-tags">
+              <span class="sk-tag">Adobe Photoshop</span
+              ><span class="sk-tag">Background Removal</span>
+              <span class="sk-tag">Color Correction</span
+              ><span class="sk-tag">Image Sharpening</span>
+              <span class="sk-tag">Web Graphics</span>
+            </div>
+          </div>
+          <div class="sk-card reveal d1">
+            <div class="sk-ic navy"><i class="fa-solid fa-server"></i></div>
+            <div class="sk-title">Back-End &amp; Dev Tools</div>
+            <div class="sk-tags">
+              <span class="sk-tag">PHP</span
+              ><span class="sk-tag">Angular 17</span>
+              <span class="sk-tag">TypeScript</span
+              ><span class="sk-tag">MySQL</span>
+              <span class="sk-tag">C# / Java / C++</span>
+              <span class="sk-tag">Git &amp; GitHub</span
+              ><span class="sk-tag">Tailwind CSS</span>
+            </div>
+          </div>
+          <div class="sk-card reveal d2">
+            <div class="sk-ic"><i class="fa-solid fa-headset"></i></div>
+            <div class="sk-title">Professional &amp; Business</div>
+            <div class="sk-tags">
+              <span class="sk-tag">Client Communication</span>
+              <span class="sk-tag">Ticket Systems</span>
+              <span class="sk-tag">MS Office Suite</span
+              ><span class="sk-tag">Salesforce</span>
+              <span class="sk-tag">Quality Assurance</span>
+              <span class="sk-tag">Bilingual EN / ES</span>
+            </div>
+          </div>
+        </div>
+        <div class="platform-note reveal" style="margin-top: 30px">
+          <i class="fa-solid fa-circle-info fa-fw"></i>
+          <p>
+            <strong>On Duda and similar platforms:</strong> Duda's visual editor
+            operates on the same section-based, widget-panel,
+            responsive-breakpoint logic as Elementor. Having built multiple
+            production sites in Elementor, I adapt to Duda's workflow without a
+            learning curve on the underlying design principles.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PROJECTS ─────────────────────────────── -->
+    <section id="projects" class="section on-white" aria-labelledby="proj-h">
+      <div class="container">
+        <div class="proj-top">
+          <div class="reveal">
+            <div class="eyebrow" style="margin-bottom: 18px">Selected Work</div>
+            <h2 id="proj-h" class="display">
+              Real sites.<br /><em>Real results.</em>
+            </h2>
+          </div>
+          <div class="filter-row" role="group" aria-label="Filter projects">
+            <button class="fbtn on" data-filter="all">All</button>
+            <button class="fbtn" data-filter="live">Live Sites</button>
+            <button class="fbtn" data-filter="wordpress">WordPress</button>
+            <button class="fbtn" data-filter="app">Web App</button>
+            <button class="fbtn" data-filter="seo">SEO</button>
           </div>
         </div>
 
-      </div>
-    </div>
-  </section>
+        <div class="proj-grid" id="projGrid">
+          <!-- 1 COMFORMATECA -->
+          <article
+            class="proj-card reveal"
+            data-category="live wordpress seo"
+            style="border-top: 2px solid var(--terra)"
+          >
+            <div class="pc-thumb th-navy">
+              <div class="pc-thumb-in">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span class="site-url">comformateca.edu.do</span>
+              </div>
+              <div class="pc-ov">
+                <a
+                  href="https://comformateca.edu.do"
+                  target="_blank"
+                  rel="noopener"
+                  title="Visit site"
+                  ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                ></a>
+              </div>
+              <span class="pc-bdg" style="background: rgba(29, 61, 92, 0.7)"
+                >WordPress</span
+              >
+              <span class="live-pill">Live</span>
+            </div>
+            <div class="pc-body">
+              <div class="pc-tags">
+                <span class="tag t-navy">WordPress</span>
+                <span class="tag t-terra">Elementor</span>
+                <span class="tag t-green">LMS / Courses</span>
+                <span class="tag t-ink">SEO</span>
+              </div>
+              <h3 class="pc-title">COMFORMATECA — Educational Platform</h3>
+              <p class="pc-desc">
+                Full WordPress + Elementor build for a professional training
+                institution with courses in Computing, Technology, Architecture,
+                and Vocational Training. Course catalog, category structure,
+                student accounts, contact forms, and full SEO setup. I'm Founder
+                &amp; CEO.
+              </p>
+              <div class="pc-foot">
+                <div class="pc-links">
+                  <a
+                    href="https://comformateca.edu.do"
+                    class="pc-lnk"
+                    target="_blank"
+                    rel="noopener"
+                    ><i class="fa-solid fa-globe"></i> Visit Site</a
+                  >
+                </div>
+                <span class="pc-meta">WordPress · Elementor</span>
+              </div>
+            </div>
+          </article>
 
-  <!-- ── SKILLS TICKER ────────────────────────── -->
-  <div class="ticker-strip" aria-hidden="true">
-    <div class="ticker-track">
-      <div class="ticker-inner" id="ticker">
-        <div class="tk-item"><span>WordPress</span><i class="fa-solid fa-diamond"></i></div>
-        <div class="tk-item"><span>Elementor</span><i class="fa-solid fa-diamond"></i></div>
-        <div class="tk-item"><span>HTML5 &amp; CSS3</span><i class="fa-solid fa-diamond"></i></div>
-        <div class="tk-item"><span>JavaScript</span><i class="fa-solid fa-diamond"></i></div>
-        <div class="tk-item"><span>Responsive Design</span><i class="fa-solid fa-diamond"></i></div>
-        <div class="tk-item"><span>SEO &amp; AIO</span><i class="fa-solid fa-diamond"></i></div>
-        <div class="tk-item"><span>Angular 17</span><i class="fa-solid fa-diamond"></i></div>
-        <div class="tk-item"><span>Adobe Photoshop</span><i class="fa-solid fa-diamond"></i></div>
-        <div class="tk-item"><span>WooCommerce</span><i class="fa-solid fa-diamond"></i></div>
-        <div class="tk-item"><span>PHP</span><i class="fa-solid fa-diamond"></i></div>
-        <div class="tk-item"><span>Duda / Visual Editors</span><i class="fa-solid fa-diamond"></i></div>
-        <div class="tk-item"><span>Core Web Vitals</span><i class="fa-solid fa-diamond"></i></div>
-        <!-- duplicate for seamless loop -->
-        <div class="tk-item"><span>WordPress</span><i class="fa-solid fa-diamond"></i></div>
-        <div class="tk-item"><span>Elementor</span><i class="fa-solid fa-diamond"></i></div>
-        <div class="tk-item"><span>HTML5 &amp; CSS3</span><i class="fa-solid fa-diamond"></i></div>
-        <div class="tk-item"><span>JavaScript</span><i class="fa-solid fa-diamond"></i></div>
-        <div class="tk-item"><span>Responsive Design</span><i class="fa-solid fa-diamond"></i></div>
-        <div class="tk-item"><span>SEO &amp; AIO</span><i class="fa-solid fa-diamond"></i></div>
-        <div class="tk-item"><span>Angular 17</span><i class="fa-solid fa-diamond"></i></div>
-        <div class="tk-item"><span>Adobe Photoshop</span><i class="fa-solid fa-diamond"></i></div>
-        <div class="tk-item"><span>WooCommerce</span><i class="fa-solid fa-diamond"></i></div>
-        <div class="tk-item"><span>PHP</span><i class="fa-solid fa-diamond"></i></div>
-        <div class="tk-item"><span>Duda / Visual Editors</span><i class="fa-solid fa-diamond"></i></div>
-        <div class="tk-item"><span>Core Web Vitals</span><i class="fa-solid fa-diamond"></i></div>
-      </div>
-    </div>
-  </div>
+          <!-- 2 WORD MASTERS -->
+          <article
+            class="proj-card reveal d1"
+            data-category="live app seo"
+            style="border-top: 2px solid var(--terra)"
+          >
+            <div class="pc-thumb th-forest">
+              <div class="pc-thumb-in">
+                <i class="fa-solid fa-spell-check"></i>
+                <span class="site-url">wordmasters.net</span>
+              </div>
+              <div class="pc-ov">
+                <a
+                  href="https://www.wordmasters.net"
+                  target="_blank"
+                  rel="noopener"
+                  title="Play live"
+                  ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                ></a>
+              </div>
+              <span class="pc-bdg" style="background: rgba(30, 71, 48, 0.8)"
+                >Web App</span
+              >
+              <span class="live-pill">Live</span>
+            </div>
+            <div class="pc-body">
+              <div class="pc-tags">
+                <span class="tag t-ink">JavaScript</span>
+                <span class="tag t-ink">HTML5</span>
+                <span class="tag t-green">Game / App</span>
+                <span class="tag t-terra">SEO</span>
+              </div>
+              <h3 class="pc-title">Word Masters — Word Search Game</h3>
+              <p class="pc-desc">
+                Browser-based word search game with difficulty levels, global
+                leaderboard, and bilingual support (EN/ES). Built with vanilla
+                JavaScript, fully responsive, and equipped with Open Graph /
+                Twitter Card meta for social sharing.
+              </p>
+              <div class="pc-foot">
+                <div class="pc-links">
+                  <a
+                    href="https://www.wordmasters.net"
+                    class="pc-lnk"
+                    target="_blank"
+                    rel="noopener"
+                    ><i class="fa-solid fa-globe"></i> Play Live</a
+                  >
+                </div>
+                <span class="pc-meta">Vanilla JS · HTML/CSS</span>
+              </div>
+            </div>
+          </article>
 
-  <!-- ── ABOUT ────────────────────────────────── -->
-  <section id="about" class="section on-white" aria-labelledby="about-h">
-    <div class="container">
-      <div class="about-grid">
+          <!-- 3 ALTER -->
+          <article
+            class="proj-card reveal d2"
+            data-category="live wordpress"
+            style="border-top: 2px solid var(--terra)"
+          >
+            <div class="pc-thumb th-slate">
+              <div class="pc-thumb-in">
+                <i class="fa-solid fa-building"></i>
+                <span class="site-url">alter.com.do</span>
+              </div>
+              <div class="pc-ov">
+                <a
+                  href="https://www.alter.com.do"
+                  target="_blank"
+                  rel="noopener"
+                  title="Visit site"
+                  ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                ></a>
+              </div>
+              <span class="pc-bdg" style="background: rgba(45, 63, 82, 0.8)"
+                >Freelance</span
+              >
+              <span class="live-pill">Live</span>
+            </div>
+            <div class="pc-body">
+              <div class="pc-tags">
+                <span class="tag t-navy">Full-Stack</span>
+                <span class="tag t-ink">HTML / CSS / JS</span>
+                <span class="tag t-green">Freelance</span>
+              </div>
+              <h3 class="pc-title">Alter — Corporate Website</h3>
+              <p class="pc-desc">
+                Freelance development contribution to Alter's corporate site.
+                Responsibilities covered design implementation, responsive
+                layout builds, and ongoing maintenance as part of a
+                collaborative team.
+              </p>
+              <div class="pc-foot">
+                <div class="pc-links">
+                  <a
+                    href="https://www.alter.com.do"
+                    class="pc-lnk"
+                    target="_blank"
+                    rel="noopener"
+                    ><i class="fa-solid fa-globe"></i> Visit Site</a
+                  >
+                </div>
+                <span class="pc-meta">HTML / CSS / JS</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4 DEKSEN -->
+          <article
+            class="proj-card reveal"
+            data-category="app"
+            style="border-top: 2px solid var(--terra)"
+          >
+            <div class="pc-thumb th-dusk">
+              <div class="pc-thumb-in">
+                <i class="fa-brands fa-angular"></i>
+                <span class="site-url">github · DEKSEN</span>
+              </div>
+              <div class="pc-ov">
+                <a
+                  href="https://github.com/MiguelSanchezCuello/deksen"
+                  target="_blank"
+                  rel="noopener"
+                  title="View source"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+              </div>
+              <span class="pc-bdg" style="background: rgba(44, 42, 74, 0.8)"
+                >Angular</span
+              >
+            </div>
+            <div class="pc-body">
+              <div class="pc-tags">
+                <span class="tag t-navy">Angular 17</span>
+                <span class="tag t-navy">TypeScript</span>
+                <span class="tag t-ink">Tailwind CSS</span>
+                <span class="tag t-ink">SCSS</span>
+              </div>
+              <h3 class="pc-title">DEKSEN — Angular Web Application</h3>
+              <p class="pc-desc">
+                Single-page application built with Angular 17, TypeScript,
+                Tailwind CSS, and SCSS. Demonstrates component-based
+                architecture, routing, reactive patterns, and utility-first CSS.
+                Source on GitHub.
+              </p>
+              <div class="pc-foot">
+                <div class="pc-links">
+                  <a
+                    href="https://github.com/MiguelSanchezCuello/deksen"
+                    class="pc-lnk"
+                    target="_blank"
+                    rel="noopener"
+                    ><i class="fa-brands fa-github"></i> Source Code</a
+                  >
+                </div>
+                <span class="pc-meta">TypeScript 61% · HTML 36%</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5 ARCHITECT -->
+          <article
+            class="proj-card reveal d1"
+            data-category="live wordpress"
+            style="border-top: 2px solid var(--terra)"
+          >
+            <div class="pc-thumb th-wine">
+              <div class="pc-thumb-in">
+                <i class="fa-solid fa-compass-drafting"></i>
+                <span class="site-url">Client Portfolio</span>
+              </div>
+              <div class="pc-ov">
+                <a href="#" title="Link on request"
+                  ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                ></a>
+              </div>
+              <span class="pc-bdg" style="background: rgba(90, 30, 46, 0.8)"
+                >Client Work</span
+              >
+            </div>
+            <div class="pc-body">
+              <div class="pc-tags">
+                <span class="tag t-terra">WordPress</span>
+                <span class="tag t-terra">Elementor</span>
+                <span class="tag t-green">Portfolio</span>
+              </div>
+              <h3 class="pc-title">Architect Dawilka Arias — Portfolio</h3>
+              <p class="pc-desc">
+                Custom portfolio site for a professional architect. Gallery
+                layouts, project detail pages, about section, and contact form —
+                built to client specification in WordPress and Elementor.
+              </p>
+              <div class="pc-foot">
+                <div class="pc-links">
+                  <span class="pc-lnk" style="cursor: default; opacity: 0.55"
+                    ><i class="fa-solid fa-lock"></i> Link on request</span
+                  >
+                </div>
+                <span class="pc-meta">WordPress · Elementor</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 6 DEOLINK -->
+          <article
+            class="proj-card reveal d2"
+            data-category="live wordpress seo"
+            style="border-top: 2px solid var(--terra)"
+          >
+            <div class="pc-thumb th-cognac">
+              <div class="pc-thumb-in">
+                <i class="fa-solid fa-newspaper"></i>
+                <span class="site-url">DeoLink — Tech News</span>
+              </div>
+              <div class="pc-ov">
+                <a href="#" title="Team project"
+                  ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                ></a>
+              </div>
+              <span class="pc-bdg" style="background: rgba(107, 61, 26, 0.8)"
+                >Collaboration</span
+              >
+            </div>
+            <div class="pc-body">
+              <div class="pc-tags">
+                <span class="tag t-terra">WordPress</span>
+                <span class="tag t-terra">SEO</span>
+                <span class="tag t-ink">Editorial</span>
+              </div>
+              <h3 class="pc-title">DeoLink — Tech News Portal</h3>
+              <p class="pc-desc">
+                Collaborated on DeoLink, a WordPress-based tech news site.
+                Handled site structure, SEO, editorial content coordination, and
+                ongoing maintenance.
+              </p>
+              <div class="pc-foot">
+                <div class="pc-links">
+                  <span class="pc-lnk" style="cursor: default; opacity: 0.55"
+                    ><i class="fa-solid fa-users"></i> Team collaboration</span
+                  >
+                </div>
+                <span class="pc-meta">WordPress · SEO</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 7 MOCKUP — Sterling & Voss Family Law -->
+          <article class="proj-card reveal" data-category="seo">
+            <div class="pc-thumb th-teal">
+              <div class="pc-thumb-in">
+                <i class="fa-solid fa-legal"></i>
+                <span class="site-url">Family Law</span>
+              </div>
+              <div class="pc-ov">
+                <a
+                  href="https://miguelsanchezcuello.github.io/sterling-voss-family-law/"
+                  target="_blank"
+                  rel="noopener"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+              </div>
+              <span class="pc-bdg" style="background: rgba(13, 79, 75, 0.7)"
+                >Proposal</span
+              >
+            </div>
+            <div class="pc-body">
+              <div class="pc-tags">
+                <span class="tag t-navy">HTML / CSS</span
+                ><span class="tag t-ink">SEO</span
+                ><span class="tag t-green">Javascript</span>
+              </div>
+              <h3 class="pc-title">Sterling & Voss</h3>
+              <p class="pc-desc">
+                Professional family law site with SEO‑optimized copy, responsive
+                design, and clear client‑focused branding.
+              </p>
+              <div class="pc-foot">
+                <div class="pc-links">
+                  <a
+                    href="https://miguelsanchezcuello.github.io/sterling-voss-family-law/"
+                    class="pc-lnk"
+                    target="_blank"
+                    rel="noopener"
+                    ><i class="fa-brands fa-github"></i> GitHub</a
+                  >
+                </div>
+                <span class="pc-meta">HTML · CSS · JavaScript</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 8 MOCKUP — WooCommerce -->
+          <article class="proj-card reveal d1" data-category="wordpress app">
+            <div class="pc-thumb th-iron">
+              <div class="pc-thumb-in">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="site-url">In progress</span>
+              </div>
+              <div class="pc-ov">
+                <a
+                  href="https://github.com/MiguelSanchezCuello"
+                  target="_blank"
+                  rel="noopener"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+              </div>
+              <span class="pc-bdg" style="background: rgba(51, 51, 51, 0.7)"
+                >In Progress</span
+              >
+            </div>
+            <div class="pc-body">
+              <div class="pc-tags">
+                <span class="tag t-terra">WooCommerce</span
+                ><span class="tag t-terra">Elementor</span
+                ><span class="tag t-green">E-Commerce</span>
+              </div>
+              <h3 class="pc-title">WooCommerce Store</h3>
+              <p class="pc-desc">
+                E-commerce store with custom Elementor product layouts, cart
+                optimization, payment gateway integration, and
+                Photoshop-enhanced product imagery. Coming soon.
+              </p>
+              <div class="pc-foot">
+                <div class="pc-links">
+                  <a
+                    href="https://github.com/MiguelSanchezCuello"
+                    class="pc-lnk"
+                    target="_blank"
+                    rel="noopener"
+                    ><i class="fa-brands fa-github"></i> GitHub</a
+                  >
+                </div>
+                <span class="pc-meta">WooCommerce · PHP</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 9 MOCKUP — Healthcare -->
+          <article class="proj-card reveal d2" data-category="wordpress seo">
+            <div class="pc-thumb th-sage">
+              <div class="pc-thumb-in">
+                <i class="fa-solid fa-hospital"></i>
+                <span class="site-url">In progress</span>
+              </div>
+              <div class="pc-ov">
+                <a
+                  href="https://github.com/MiguelSanchezCuello"
+                  target="_blank"
+                  rel="noopener"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+              </div>
+              <span class="pc-bdg" style="background: rgba(45, 74, 62, 0.7)"
+                >In Progress</span
+              >
+            </div>
+            <div class="pc-body">
+              <div class="pc-tags">
+                <span class="tag t-terra">WordPress</span
+                ><span class="tag t-ink">Local SEO</span
+                ><span class="tag t-green">Accessible</span>
+              </div>
+              <h3 class="pc-title">Healthcare Practice Website</h3>
+              <p class="pc-desc">
+                Responsive, accessible healthcare site with appointment booking,
+                local SEO optimization, patient testimonials, and WCAG-compliant
+                design. Coming soon.
+              </p>
+              <div class="pc-foot">
+                <div class="pc-links">
+                  <a
+                    href="https://github.com/MiguelSanchezCuello"
+                    class="pc-lnk"
+                    target="_blank"
+                    rel="noopener"
+                    ><i class="fa-brands fa-github"></i> GitHub</a
+                  >
+                </div>
+                <span class="pc-meta">WordPress · CSS</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 10 MOCKUP — UI Library -->
+          <article class="proj-card reveal" data-category="app">
+            <div class="pc-thumb th-maroon">
+              <div class="pc-thumb-in">
+                <i class="fa-solid fa-puzzle-piece"></i>
+                <span class="site-url">In progress</span>
+              </div>
+              <div class="pc-ov">
+                <a
+                  href="https://github.com/MiguelSanchezCuello"
+                  target="_blank"
+                  rel="noopener"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+              </div>
+              <span class="pc-bdg" style="background: rgba(74, 30, 30, 0.7)"
+                >In Progress</span
+              >
+            </div>
+            <div class="pc-body">
+              <div class="pc-tags">
+                <span class="tag t-navy">JavaScript</span
+                ><span class="tag t-ink">HTML / CSS</span
+                ><span class="tag t-green">Components</span>
+              </div>
+              <h3 class="pc-title">Interactive UI Component Library</h3>
+              <p class="pc-desc">
+                Reusable, accessible UI components in vanilla JS — modals,
+                accordions, carousels, and form validators — with live
+                documentation and demos. Coming soon.
+              </p>
+              <div class="pc-foot">
+                <div class="pc-links">
+                  <a
+                    href="https://github.com/MiguelSanchezCuello"
+                    class="pc-lnk"
+                    target="_blank"
+                    rel="noopener"
+                    ><i class="fa-brands fa-github"></i> GitHub</a
+                  >
+                </div>
+                <span class="pc-meta">Vanilla JS</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── EXPERIENCE ────────────────────────────── -->
+    <section id="experience" class="section" aria-labelledby="exp-h">
+      <div class="container">
         <div class="reveal">
-          <div class="eyebrow" style="margin-bottom:18px">About Me</div>
-          <h2 id="about-h" class="display">Detail-oriented. <em>Creative.</em> Always on time.</h2>
-          <p>I'm a bilingual (EN/ES) website designer and developer with a <strong>B.Sc. in Computer Science</strong> and 4+ years of freelance web experience. My professional foundation started early — building inventory systems from scratch in 2004, studying computer systems, and earning a degree that covers algorithms, OOP, databases, and system design.</p>
-          <p>My years in Quality Assurance and client-facing roles are a genuine advantage in web work: I write clearly, communicate proactively, document precisely, and catch mistakes before anyone else does. Clients get projects that are accurate, delivered on time, and exactly what was agreed on.</p>
-          <p>I work across the full stack — from Elementor page builds to custom HTML/CSS/JS, PHP, and Angular 17 — and I bring Photoshop image editing and SEO optimization into every build from the start.</p>
-          <div class="about-items">
-            <div class="a-row">
-              <div class="a-ic"><i class="fa-solid fa-graduation-cap"></i></div>
-              <div><div class="a-h">B.Sc. Computer Science</div><div class="a-p">Universidad Autónoma de Santo Domingo (UASD)</div></div>
+          <div class="eyebrow" style="margin-bottom: 18px">Background</div>
+          <h2 id="exp-h" class="display">
+            Experience &amp;<br /><em>education.</em>
+          </h2>
+        </div>
+        <div class="exp-grid">
+          <div class="reveal">
+            <div class="col-head">
+              <i class="fa-solid fa-briefcase"></i> Work Experience
             </div>
-            <div class="a-row">
-              <div class="a-ic"><i class="fa-solid fa-earth-americas"></i></div>
-              <div><div class="a-h">Bilingual — English &amp; Spanish</div><div class="a-p">Dominican American Cultural Institute · Professionally certified</div></div>
+            <div class="tl">
+              <div class="tl-item">
+                <div class="tl-dot"><i class="fa-solid fa-code"></i></div>
+                <div class="tl-box">
+                  <p class="tl-period">2022 – Present</p>
+                  <h3 class="tl-title">Freelance Web Developer</h3>
+                  <p class="tl-org">Self-Employed — Various Clients</p>
+                  <ul class="tl-desc">
+                    <li>
+                      Built comformateca.edu.do with WordPress &amp; Elementor
+                    </li>
+                    <li>
+                      Developed wordmasters.net — game with global leaderboard
+                    </li>
+                    <li>Fullstack contributions to alter.com.do</li>
+                    <li>Custom portfolio for Architect Dawilka Arias</li>
+                    <li>WordPress collaboration on DeoLink tech news portal</li>
+                    <li>Angular 17 development (DEKSEN project)</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="tl-item">
+                <div class="tl-dot">
+                  <i class="fa-solid fa-shield-check"></i>
+                </div>
+                <div class="tl-box">
+                  <p class="tl-period">2010 – 2022</p>
+                  <h3 class="tl-title">Customer Experience &amp; QA Analyst</h3>
+                  <p class="tl-org">ACS / Xerox — BPO Operations</p>
+                  <ul class="tl-desc">
+                    <li>QA Analyst, Supervisor, and Customer Advocacy roles</li>
+                    <li>
+                      Email and ticket-based client communication at scale
+                    </li>
+                    <li>Training, coaching, and calibration moderation</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="tl-item">
+                <div class="tl-dot"><i class="fa-solid fa-database"></i></div>
+                <div class="tl-box">
+                  <p class="tl-period">2004 – 2005</p>
+                  <h3 class="tl-title">System Analyst</h3>
+                  <p class="tl-org">PUKO Tire Center</p>
+                  <p class="tl-desc">
+                    Built computerized inventory and billing systems from
+                    scratch.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="a-row">
-              <div class="a-ic"><i class="fa-solid fa-shield-check"></i></div>
-              <div><div class="a-h">QA &amp; Client Support Background</div><div class="a-p">Precision, professional communication, and delivery discipline — built into everything I do</div></div>
+          </div>
+          <div class="reveal d1">
+            <div class="col-head">
+              <i class="fa-solid fa-graduation-cap"></i> Education
+            </div>
+            <div class="tl">
+              <div class="tl-item">
+                <div class="tl-dot"><i class="fa-solid fa-university"></i></div>
+                <div class="tl-box">
+                  <p class="tl-period">Completed</p>
+                  <h3 class="tl-title">B.Sc. Computer Science</h3>
+                  <p class="tl-org">UASD</p>
+                  <p class="tl-desc">
+                    Algorithms, OOP (Java, C#, C++), databases, web programming,
+                    UML, and system analysis.
+                  </p>
+                </div>
+              </div>
+              <div class="tl-item">
+                <div class="tl-dot">
+                  <i class="fa-solid fa-chalkboard-user"></i>
+                </div>
+                <div class="tl-box">
+                  <p class="tl-period">2021</p>
+                  <h3 class="tl-title">
+                    Professional Educator &amp; Virtual Tutor
+                  </h3>
+                  <p class="tl-org">INFOTEP</p>
+                  <p class="tl-desc">
+                    Certified in modern training methodologies for in-person and
+                    virtual environments.
+                  </p>
+                </div>
+              </div>
+              <div class="tl-item">
+                <div class="tl-dot"><i class="fa-solid fa-laptop"></i></div>
+                <div class="tl-box">
+                  <p class="tl-period">2001 – 2005</p>
+                  <h3 class="tl-title">Professional Computer Technician</h3>
+                  <p class="tl-org">Dr. Fabio A. Mota Polytechnic Institute</p>
+                  <p class="tl-desc">
+                    OS, networking, databases, programming fundamentals, and MS
+                    Office Suite.
+                  </p>
+                </div>
+              </div>
+              <div class="tl-item">
+                <div class="tl-dot"><i class="fa-solid fa-language"></i></div>
+                <div class="tl-box">
+                  <p class="tl-period">2009 – Present</p>
+                  <h3 class="tl-title">Bilingual — English &amp; Spanish</h3>
+                  <p class="tl-org">Dominican American Cultural Institute</p>
+                  <p class="tl-desc">
+                    Certified. 10+ years of client-facing professional
+                    communication in both languages.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="reveal d1">
-          <div style="font-size:.72rem;font-weight:800;color:var(--muted);margin-bottom:16px;text-transform:uppercase;letter-spacing:.12em;">Certifications &amp; Training</div>
-          <div class="cert-grid">
-            <div class="cert-c"><i class="fa-solid fa-certificate"></i><h5>Responsive Web Design</h5><p>freeCodeCamp</p></div>
-            <div class="cert-c"><i class="fa-brands fa-css3-alt"></i><h5>HTML, CSS &amp; JavaScript</h5><p>SOLOLEARN · CTC</p></div>
-            <div class="cert-c"><i class="fa-solid fa-magnifying-glass-chart"></i><h5>SEO Specialist</h5><p>Search Engine Optimization</p></div>
-            <div class="cert-c"><i class="fa-brands fa-php"></i><h5>PHP Programming</h5><p>INFOTEP</p></div>
-            <div class="cert-c"><i class="fa-brands fa-adobe"></i><h5>Photoshop &amp; Graphic Design</h5><p>CTC</p></div>
-            <div class="cert-c"><i class="fa-solid fa-bullhorn"></i><h5>Digital Marketing</h5><p>CTC · DeoLink</p></div>
-            <div class="cert-c"><i class="fa-solid fa-chalkboard-user"></i><h5>Professional Educator</h5><p>INFOTEP Certified Trainer</p></div>
-            <div class="cert-c"><i class="fa-solid fa-database"></i><h5>Data Analysis — Excel</h5><p>edX Education</p></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── SKILLS ───────────────────────────────── -->
-  <section id="skills" class="section" aria-labelledby="skills-h">
-    <div class="container">
-      <div class="reveal">
-        <div class="eyebrow" style="margin-bottom:18px">Technical Skills</div>
-        <h2 id="skills-h" class="display">A full toolkit for<br><em>modern web projects.</em></h2>
-        <p class="lead" style="max-width:500px">Every skill is grounded in real builds, formal certifications, and a Computer Science degree.</p>
-      </div>
-      <div class="skills-grid">
-        <div class="sk-card reveal d1">
-          <div class="sk-ic"><i class="fa-solid fa-code"></i></div>
-          <div class="sk-title">Front-End Development</div>
-          <div class="sk-tags">
-            <span class="sk-tag">HTML5</span><span class="sk-tag">CSS3</span>
-            <span class="sk-tag">JavaScript</span><span class="sk-tag">Bootstrap</span>
-            <span class="sk-tag">jQuery</span><span class="sk-tag">Flexbox &amp; Grid</span>
-            <span class="sk-tag">Responsive Design</span>
-          </div>
-        </div>
-        <div class="sk-card reveal d2">
-          <div class="sk-ic navy"><i class="fa-brands fa-wordpress"></i></div>
-          <div class="sk-title">WordPress &amp; Page Builders</div>
-          <div class="sk-tags">
-            <span class="sk-tag">WordPress</span><span class="sk-tag">Elementor</span>
-            <span class="sk-tag">WooCommerce</span><span class="sk-tag">Custom Themes</span>
-            <span class="sk-tag">PHP Customization</span><span class="sk-tag">Plugin Integration</span>
-          </div>
-        </div>
-        <div class="sk-card reveal d1">
-          <div class="sk-ic"><i class="fa-solid fa-magnifying-glass"></i></div>
-          <div class="sk-title">SEO &amp; AIO</div>
-          <div class="sk-tags">
-            <span class="sk-tag">On-Page SEO</span><span class="sk-tag">Technical SEO</span>
-            <span class="sk-tag">Schema / Structured Data</span>
-            <span class="sk-tag">Core Web Vitals</span>
-            <span class="sk-tag">AI Search Optimization</span>
-          </div>
-        </div>
-        <div class="sk-card reveal d2">
-          <div class="sk-ic green"><i class="fa-brands fa-adobe"></i></div>
-          <div class="sk-title">Design &amp; Image Editing</div>
-          <div class="sk-tags">
-            <span class="sk-tag">Adobe Photoshop</span><span class="sk-tag">Background Removal</span>
-            <span class="sk-tag">Color Correction</span><span class="sk-tag">Image Sharpening</span>
-            <span class="sk-tag">Web Graphics</span>
-          </div>
-        </div>
-        <div class="sk-card reveal d1">
-          <div class="sk-ic navy"><i class="fa-solid fa-server"></i></div>
-          <div class="sk-title">Back-End &amp; Dev Tools</div>
-          <div class="sk-tags">
-            <span class="sk-tag">PHP</span><span class="sk-tag">Angular 17</span>
-            <span class="sk-tag">TypeScript</span><span class="sk-tag">MySQL</span>
-            <span class="sk-tag">C# / Java / C++</span>
-            <span class="sk-tag">Git &amp; GitHub</span><span class="sk-tag">Tailwind CSS</span>
-          </div>
-        </div>
-        <div class="sk-card reveal d2">
-          <div class="sk-ic"><i class="fa-solid fa-headset"></i></div>
-          <div class="sk-title">Professional &amp; Business</div>
-          <div class="sk-tags">
-            <span class="sk-tag">Client Communication</span>
-            <span class="sk-tag">Ticket Systems</span>
-            <span class="sk-tag">MS Office Suite</span><span class="sk-tag">Salesforce</span>
-            <span class="sk-tag">Quality Assurance</span>
-            <span class="sk-tag">Bilingual EN / ES</span>
-          </div>
-        </div>
-      </div>
-      <div class="platform-note reveal" style="margin-top:30px">
-        <i class="fa-solid fa-circle-info fa-fw"></i>
-        <p><strong>On Duda and similar platforms:</strong> Duda's visual editor operates on the same section-based, widget-panel, responsive-breakpoint logic as Elementor. Having built multiple production sites in Elementor, I adapt to Duda's workflow without a learning curve on the underlying design principles.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── PROJECTS ─────────────────────────────── -->
-  <section id="projects" class="section on-white" aria-labelledby="proj-h">
-    <div class="container">
-      <div class="proj-top">
+    <!-- ── SERVICES ──────────────────────────────── -->
+    <section id="services" class="section on-white" aria-labelledby="srv-h">
+      <div class="container">
         <div class="reveal">
-          <div class="eyebrow" style="margin-bottom:18px">Selected Work</div>
-          <h2 id="proj-h" class="display">Real sites.<br><em>Real results.</em></h2>
+          <div class="eyebrow" style="margin-bottom: 18px">Services</div>
+          <h2 id="srv-h" class="display">What I <em>deliver.</em></h2>
+          <p class="lead" style="max-width: 460px">
+            End-to-end web services built around real client and agency needs.
+          </p>
         </div>
-        <div class="filter-row" role="group" aria-label="Filter projects">
-          <button class="fbtn on"  data-filter="all">All</button>
-          <button class="fbtn"     data-filter="live">Live Sites</button>
-          <button class="fbtn"     data-filter="wordpress">WordPress</button>
-          <button class="fbtn"     data-filter="app">Web App</button>
-          <button class="fbtn"     data-filter="seo">SEO</button>
-        </div>
-      </div>
-
-      <div class="proj-grid" id="projGrid">
-
-        <!-- 1 COMFORMATECA -->
-        <article class="proj-card reveal" data-category="live wordpress seo" style="border-top:2px solid var(--terra)">
-          <div class="pc-thumb th-navy">
-            <div class="pc-thumb-in">
-              <i class="fa-solid fa-graduation-cap"></i>
-              <span class="site-url">comformateca.edu.do</span>
-            </div>
-            <div class="pc-ov">
-              <a href="https://comformateca.edu.do" target="_blank" rel="noopener" title="Visit site"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-            <span class="pc-bdg" style="background:rgba(29,61,92,.7)">WordPress</span>
-            <span class="live-pill">Live</span>
+        <div class="srv-grid">
+          <div class="srv-card reveal">
+            <div class="srv-num">01</div>
+            <div class="srv-ic"><i class="fa-solid fa-paintbrush"></i></div>
+            <h3 class="srv-title">Website Design &amp; Build</h3>
+            <p class="srv-desc">
+              From-scratch builds using your content — responsive,
+              SEO-optimized, and visually polished. Delivered accurately and on
+              time.
+            </p>
           </div>
-          <div class="pc-body">
-            <div class="pc-tags">
-              <span class="tag t-navy">WordPress</span>
-              <span class="tag t-terra">Elementor</span>
-              <span class="tag t-green">LMS / Courses</span>
-              <span class="tag t-ink">SEO</span>
-            </div>
-            <h3 class="pc-title">COMFORMATECA — Educational Platform</h3>
-            <p class="pc-desc">Full WordPress + Elementor build for a professional training institution with courses in Computing, Technology, Architecture, and Vocational Training. Course catalog, category structure, student accounts, contact forms, and full SEO setup. I'm Founder &amp; CEO.</p>
-            <div class="pc-foot">
-              <div class="pc-links">
-                <a href="https://comformateca.edu.do" class="pc-lnk" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> Visit Site</a>
-              </div>
-              <span class="pc-meta">WordPress · Elementor</span>
-            </div>
+          <div class="srv-card reveal d1">
+            <div class="srv-num">02</div>
+            <div class="srv-ic"><i class="fa-solid fa-rotate"></i></div>
+            <h3 class="srv-title">Updates &amp; Maintenance</h3>
+            <p class="srv-desc">
+              Changes via ticket or email — new pages, layout updates, custom
+              code, and maintenance with fast turnaround.
+            </p>
           </div>
-        </article>
-
-        <!-- 2 WORD MASTERS -->
-        <article class="proj-card reveal d1" data-category="live app seo" style="border-top:2px solid var(--terra)">
-          <div class="pc-thumb th-forest">
-            <div class="pc-thumb-in">
-              <i class="fa-solid fa-spell-check"></i>
-              <span class="site-url">wordmasters.net</span>
-            </div>
-            <div class="pc-ov">
-              <a href="https://www.wordmasters.net" target="_blank" rel="noopener" title="Play live"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-            <span class="pc-bdg" style="background:rgba(30,71,48,.8)">Web App</span>
-            <span class="live-pill">Live</span>
+          <div class="srv-card reveal d2">
+            <div class="srv-num">03</div>
+            <div class="srv-ic"><i class="fa-brands fa-wordpress"></i></div>
+            <h3 class="srv-title">WordPress / Elementor / Duda</h3>
+            <p class="srv-desc">
+              Theme customization, child themes, Elementor builds, WooCommerce,
+              plugin integration, and Duda-equivalent visual workflows.
+            </p>
           </div>
-          <div class="pc-body">
-            <div class="pc-tags">
-              <span class="tag t-ink">JavaScript</span>
-              <span class="tag t-ink">HTML5</span>
-              <span class="tag t-green">Game / App</span>
-              <span class="tag t-terra">SEO</span>
+          <div class="srv-card reveal">
+            <div class="srv-num">04</div>
+            <div class="srv-ic">
+              <i class="fa-solid fa-magnifying-glass-chart"></i>
             </div>
-            <h3 class="pc-title">Word Masters — Word Search Game</h3>
-            <p class="pc-desc">Browser-based word search game with difficulty levels, global leaderboard, and bilingual support (EN/ES). Built with vanilla JavaScript, fully responsive, and equipped with Open Graph / Twitter Card meta for social sharing.</p>
-            <div class="pc-foot">
-              <div class="pc-links">
-                <a href="https://www.wordmasters.net" class="pc-lnk" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> Play Live</a>
-              </div>
-              <span class="pc-meta">Vanilla JS · HTML/CSS</span>
-            </div>
+            <h3 class="srv-title">SEO &amp; AIO Optimization</h3>
+            <p class="srv-desc">
+              On-page SEO, schema markup, Core Web Vitals improvements, and
+              AI-search-optimized content for maximum visibility.
+            </p>
           </div>
-        </article>
-
-        <!-- 3 ALTER -->
-        <article class="proj-card reveal d2" data-category="live wordpress" style="border-top:2px solid var(--terra)">
-          <div class="pc-thumb th-slate">
-            <div class="pc-thumb-in">
-              <i class="fa-solid fa-building"></i>
-              <span class="site-url">alter.com.do</span>
-            </div>
-            <div class="pc-ov">
-              <a href="https://www.alter.com.do" target="_blank" rel="noopener" title="Visit site"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-            <span class="pc-bdg" style="background:rgba(45,63,82,.8)">Freelance</span>
-            <span class="live-pill">Live</span>
+          <div class="srv-card reveal d1">
+            <div class="srv-num">05</div>
+            <div class="srv-ic"><i class="fa-brands fa-adobe"></i></div>
+            <h3 class="srv-title">Image Editing</h3>
+            <p class="srv-desc">
+              Background removal, color correction, sharpening, typography
+              matching, and web-ready optimization — all in Photoshop.
+            </p>
           </div>
-          <div class="pc-body">
-            <div class="pc-tags">
-              <span class="tag t-navy">Full-Stack</span>
-              <span class="tag t-ink">HTML / CSS / JS</span>
-              <span class="tag t-green">Freelance</span>
-            </div>
-            <h3 class="pc-title">Alter — Corporate Website</h3>
-            <p class="pc-desc">Freelance development contribution to Alter's corporate site. Responsibilities covered design implementation, responsive layout builds, and ongoing maintenance as part of a collaborative team.</p>
-            <div class="pc-foot">
-              <div class="pc-links">
-                <a href="https://www.alter.com.do" class="pc-lnk" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> Visit Site</a>
-              </div>
-              <span class="pc-meta">HTML / CSS / JS</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- 4 DEKSEN -->
-        <article class="proj-card reveal" data-category="app" style="border-top:2px solid var(--terra)">
-          <div class="pc-thumb th-dusk">
-            <div class="pc-thumb-in">
-              <i class="fa-brands fa-angular"></i>
-              <span class="site-url">github · DEKSEN</span>
-            </div>
-            <div class="pc-ov">
-              <a href="https://github.com/MiguelSanchezCuello/deksen" target="_blank" rel="noopener" title="View source"><i class="fa-brands fa-github"></i></a>
-            </div>
-            <span class="pc-bdg" style="background:rgba(44,42,74,.8)">Angular</span>
-          </div>
-          <div class="pc-body">
-            <div class="pc-tags">
-              <span class="tag t-navy">Angular 17</span>
-              <span class="tag t-navy">TypeScript</span>
-              <span class="tag t-ink">Tailwind CSS</span>
-              <span class="tag t-ink">SCSS</span>
-            </div>
-            <h3 class="pc-title">DEKSEN — Angular Web Application</h3>
-            <p class="pc-desc">Single-page application built with Angular 17, TypeScript, Tailwind CSS, and SCSS. Demonstrates component-based architecture, routing, reactive patterns, and utility-first CSS. Source on GitHub.</p>
-            <div class="pc-foot">
-              <div class="pc-links">
-                <a href="https://github.com/MiguelSanchezCuello/deksen" class="pc-lnk" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Source Code</a>
-              </div>
-              <span class="pc-meta">TypeScript 61% · HTML 36%</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- 5 ARCHITECT -->
-        <article class="proj-card reveal d1" data-category="live wordpress" style="border-top:2px solid var(--terra)">
-          <div class="pc-thumb th-wine">
-            <div class="pc-thumb-in">
-              <i class="fa-solid fa-compass-drafting"></i>
-              <span class="site-url">Client Portfolio</span>
-            </div>
-            <div class="pc-ov">
-              <a href="#" title="Link on request"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-            <span class="pc-bdg" style="background:rgba(90,30,46,.8)">Client Work</span>
-          </div>
-          <div class="pc-body">
-            <div class="pc-tags">
-              <span class="tag t-terra">WordPress</span>
-              <span class="tag t-terra">Elementor</span>
-              <span class="tag t-green">Portfolio</span>
-            </div>
-            <h3 class="pc-title">Architect Dawilka Arias — Portfolio</h3>
-            <p class="pc-desc">Custom portfolio site for a professional architect. Gallery layouts, project detail pages, about section, and contact form — built to client specification in WordPress and Elementor.</p>
-            <div class="pc-foot">
-              <div class="pc-links">
-                <span class="pc-lnk" style="cursor:default;opacity:.55"><i class="fa-solid fa-lock"></i> Link on request</span>
-              </div>
-              <span class="pc-meta">WordPress · Elementor</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- 6 DEOLINK -->
-        <article class="proj-card reveal d2" data-category="live wordpress seo" style="border-top:2px solid var(--terra)">
-          <div class="pc-thumb th-cognac">
-            <div class="pc-thumb-in">
-              <i class="fa-solid fa-newspaper"></i>
-              <span class="site-url">DeoLink — Tech News</span>
-            </div>
-            <div class="pc-ov">
-              <a href="#" title="Team project"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-            <span class="pc-bdg" style="background:rgba(107,61,26,.8)">Collaboration</span>
-          </div>
-          <div class="pc-body">
-            <div class="pc-tags">
-              <span class="tag t-terra">WordPress</span>
-              <span class="tag t-terra">SEO</span>
-              <span class="tag t-ink">Editorial</span>
-            </div>
-            <h3 class="pc-title">DeoLink — Tech News Portal</h3>
-            <p class="pc-desc">Collaborated on DeoLink, a WordPress-based tech news site. Handled site structure, SEO, editorial content coordination, and ongoing maintenance.</p>
-            <div class="pc-foot">
-              <div class="pc-links">
-                <span class="pc-lnk" style="cursor:default;opacity:.55"><i class="fa-solid fa-users"></i> Team collaboration</span>
-              </div>
-              <span class="pc-meta">WordPress · SEO</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- 7 MOCKUP — SEO Landing -->
-        <article class="proj-card reveal" data-category="seo">
-          <div class="pc-thumb th-teal">
-            <div class="pc-thumb-in">
-              <i class="fa-solid fa-rocket"></i>
-              <span class="site-url">In progress</span>
-            </div>
-            <div class="pc-ov">
-              <a href="https://github.com/MiguelSanchezCuello" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
-            </div>
-            <span class="pc-bdg" style="background:rgba(13,79,75,.7)">In Progress</span>
-          </div>
-          <div class="pc-body">
-            <div class="pc-tags"><span class="tag t-navy">HTML / CSS</span><span class="tag t-ink">SEO</span><span class="tag t-green">Landing Page</span></div>
-            <h3 class="pc-title">SEO-Optimized Landing Page</h3>
-            <p class="pc-desc">High-converting landing page with structured data, Core Web Vitals optimization, keyword-targeted headings, and schema markup. GitHub repo coming soon.</p>
-            <div class="pc-foot">
-              <div class="pc-links"><a href="https://github.com/MiguelSanchezCuello" class="pc-lnk" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a></div>
-              <span class="pc-meta">HTML · JavaScript</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- 8 MOCKUP — WooCommerce -->
-        <article class="proj-card reveal d1" data-category="wordpress app">
-          <div class="pc-thumb th-iron">
-            <div class="pc-thumb-in">
-              <i class="fa-solid fa-bag-shopping"></i>
-              <span class="site-url">In progress</span>
-            </div>
-            <div class="pc-ov">
-              <a href="https://github.com/MiguelSanchezCuello" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
-            </div>
-            <span class="pc-bdg" style="background:rgba(51,51,51,.7)">In Progress</span>
-          </div>
-          <div class="pc-body">
-            <div class="pc-tags"><span class="tag t-terra">WooCommerce</span><span class="tag t-terra">Elementor</span><span class="tag t-green">E-Commerce</span></div>
-            <h3 class="pc-title">WooCommerce Store</h3>
-            <p class="pc-desc">E-commerce store with custom Elementor product layouts, cart optimization, payment gateway integration, and Photoshop-enhanced product imagery. Coming soon.</p>
-            <div class="pc-foot">
-              <div class="pc-links"><a href="https://github.com/MiguelSanchezCuello" class="pc-lnk" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a></div>
-              <span class="pc-meta">WooCommerce · PHP</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- 9 MOCKUP — Healthcare -->
-        <article class="proj-card reveal d2" data-category="wordpress seo">
-          <div class="pc-thumb th-sage">
-            <div class="pc-thumb-in">
-              <i class="fa-solid fa-hospital"></i>
-              <span class="site-url">In progress</span>
-            </div>
-            <div class="pc-ov">
-              <a href="https://github.com/MiguelSanchezCuello" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
-            </div>
-            <span class="pc-bdg" style="background:rgba(45,74,62,.7)">In Progress</span>
-          </div>
-          <div class="pc-body">
-            <div class="pc-tags"><span class="tag t-terra">WordPress</span><span class="tag t-ink">Local SEO</span><span class="tag t-green">Accessible</span></div>
-            <h3 class="pc-title">Healthcare Practice Website</h3>
-            <p class="pc-desc">Responsive, accessible healthcare site with appointment booking, local SEO optimization, patient testimonials, and WCAG-compliant design. Coming soon.</p>
-            <div class="pc-foot">
-              <div class="pc-links"><a href="https://github.com/MiguelSanchezCuello" class="pc-lnk" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a></div>
-              <span class="pc-meta">WordPress · CSS</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- 10 MOCKUP — UI Library -->
-        <article class="proj-card reveal" data-category="app">
-          <div class="pc-thumb th-maroon">
-            <div class="pc-thumb-in">
-              <i class="fa-solid fa-puzzle-piece"></i>
-              <span class="site-url">In progress</span>
-            </div>
-            <div class="pc-ov">
-              <a href="https://github.com/MiguelSanchezCuello" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
-            </div>
-            <span class="pc-bdg" style="background:rgba(74,30,30,.7)">In Progress</span>
-          </div>
-          <div class="pc-body">
-            <div class="pc-tags"><span class="tag t-navy">JavaScript</span><span class="tag t-ink">HTML / CSS</span><span class="tag t-green">Components</span></div>
-            <h3 class="pc-title">Interactive UI Component Library</h3>
-            <p class="pc-desc">Reusable, accessible UI components in vanilla JS — modals, accordions, carousels, and form validators — with live documentation and demos. Coming soon.</p>
-            <div class="pc-foot">
-              <div class="pc-links"><a href="https://github.com/MiguelSanchezCuello" class="pc-lnk" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a></div>
-              <span class="pc-meta">Vanilla JS</span>
-            </div>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ── EXPERIENCE ────────────────────────────── -->
-  <section id="experience" class="section" aria-labelledby="exp-h">
-    <div class="container">
-      <div class="reveal">
-        <div class="eyebrow" style="margin-bottom:18px">Background</div>
-        <h2 id="exp-h" class="display">Experience &amp;<br><em>education.</em></h2>
-      </div>
-      <div class="exp-grid">
-        <div class="reveal">
-          <div class="col-head"><i class="fa-solid fa-briefcase"></i> Work Experience</div>
-          <div class="tl">
-            <div class="tl-item">
-              <div class="tl-dot"><i class="fa-solid fa-code"></i></div>
-              <div class="tl-box">
-                <p class="tl-period">2022 – Present</p>
-                <h3 class="tl-title">Freelance Web Developer</h3>
-                <p class="tl-org">Self-Employed — Various Clients</p>
-                <ul class="tl-desc">
-                  <li>Built comformateca.edu.do with WordPress &amp; Elementor</li>
-                  <li>Developed wordmasters.net — game with global leaderboard</li>
-                  <li>Fullstack contributions to alter.com.do</li>
-                  <li>Custom portfolio for Architect Dawilka Arias</li>
-                  <li>WordPress collaboration on DeoLink tech news portal</li>
-                  <li>Angular 17 development (DEKSEN project)</li>
-                </ul>
-              </div>
-            </div>
-            <div class="tl-item">
-              <div class="tl-dot"><i class="fa-solid fa-shield-check"></i></div>
-              <div class="tl-box">
-                <p class="tl-period">2010 – 2022</p>
-                <h3 class="tl-title">Customer Experience &amp; QA Analyst</h3>
-                <p class="tl-org">ACS / Xerox — BPO Operations</p>
-                <ul class="tl-desc">
-                  <li>QA Analyst, Supervisor, and Customer Advocacy roles</li>
-                  <li>Email and ticket-based client communication at scale</li>
-                  <li>Training, coaching, and calibration moderation</li>
-                </ul>
-              </div>
-            </div>
-            <div class="tl-item">
-              <div class="tl-dot"><i class="fa-solid fa-database"></i></div>
-              <div class="tl-box">
-                <p class="tl-period">2004 – 2005</p>
-                <h3 class="tl-title">System Analyst</h3>
-                <p class="tl-org">PUKO Tire Center</p>
-                <p class="tl-desc">Built computerized inventory and billing systems from scratch.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="reveal d1">
-          <div class="col-head"><i class="fa-solid fa-graduation-cap"></i> Education</div>
-          <div class="tl">
-            <div class="tl-item">
-              <div class="tl-dot"><i class="fa-solid fa-university"></i></div>
-              <div class="tl-box">
-                <p class="tl-period">Completed</p>
-                <h3 class="tl-title">B.Sc. Computer Science</h3>
-                <p class="tl-org">UASD</p>
-                <p class="tl-desc">Algorithms, OOP (Java, C#, C++), databases, web programming, UML, and system analysis.</p>
-              </div>
-            </div>
-            <div class="tl-item">
-              <div class="tl-dot"><i class="fa-solid fa-chalkboard-user"></i></div>
-              <div class="tl-box">
-                <p class="tl-period">2021</p>
-                <h3 class="tl-title">Professional Educator &amp; Virtual Tutor</h3>
-                <p class="tl-org">INFOTEP</p>
-                <p class="tl-desc">Certified in modern training methodologies for in-person and virtual environments.</p>
-              </div>
-            </div>
-            <div class="tl-item">
-              <div class="tl-dot"><i class="fa-solid fa-laptop"></i></div>
-              <div class="tl-box">
-                <p class="tl-period">2001 – 2005</p>
-                <h3 class="tl-title">Professional Computer Technician</h3>
-                <p class="tl-org">Dr. Fabio A. Mota Polytechnic Institute</p>
-                <p class="tl-desc">OS, networking, databases, programming fundamentals, and MS Office Suite.</p>
-              </div>
-            </div>
-            <div class="tl-item">
-              <div class="tl-dot"><i class="fa-solid fa-language"></i></div>
-              <div class="tl-box">
-                <p class="tl-period">2009 – Present</p>
-                <h3 class="tl-title">Bilingual — English &amp; Spanish</h3>
-                <p class="tl-org">Dominican American Cultural Institute</p>
-                <p class="tl-desc">Certified. 10+ years of client-facing professional communication in both languages.</p>
-              </div>
-            </div>
+          <div class="srv-card reveal d2">
+            <div class="srv-num">06</div>
+            <div class="srv-ic"><i class="fa-solid fa-comments"></i></div>
+            <h3 class="srv-title">Client Communication</h3>
+            <p class="srv-desc">
+              Professional email and ticket communication, issue diagnosis, and
+              bilingual delivery in English and Spanish.
+            </p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ── SERVICES ──────────────────────────────── -->
-  <section id="services" class="section on-white" aria-labelledby="srv-h">
-    <div class="container">
-      <div class="reveal">
-        <div class="eyebrow" style="margin-bottom:18px">Services</div>
-        <h2 id="srv-h" class="display">What I <em>deliver.</em></h2>
-        <p class="lead" style="max-width:460px">End-to-end web services built around real client and agency needs.</p>
-      </div>
-      <div class="srv-grid">
-        <div class="srv-card reveal">
-          <div class="srv-num">01</div>
-          <div class="srv-ic"><i class="fa-solid fa-paintbrush"></i></div>
-          <h3 class="srv-title">Website Design &amp; Build</h3>
-          <p class="srv-desc">From-scratch builds using your content — responsive, SEO-optimized, and visually polished. Delivered accurately and on time.</p>
-        </div>
-        <div class="srv-card reveal d1">
-          <div class="srv-num">02</div>
-          <div class="srv-ic"><i class="fa-solid fa-rotate"></i></div>
-          <h3 class="srv-title">Updates &amp; Maintenance</h3>
-          <p class="srv-desc">Changes via ticket or email — new pages, layout updates, custom code, and maintenance with fast turnaround.</p>
-        </div>
-        <div class="srv-card reveal d2">
-          <div class="srv-num">03</div>
-          <div class="srv-ic"><i class="fa-brands fa-wordpress"></i></div>
-          <h3 class="srv-title">WordPress / Elementor / Duda</h3>
-          <p class="srv-desc">Theme customization, child themes, Elementor builds, WooCommerce, plugin integration, and Duda-equivalent visual workflows.</p>
-        </div>
-        <div class="srv-card reveal">
-          <div class="srv-num">04</div>
-          <div class="srv-ic"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
-          <h3 class="srv-title">SEO &amp; AIO Optimization</h3>
-          <p class="srv-desc">On-page SEO, schema markup, Core Web Vitals improvements, and AI-search-optimized content for maximum visibility.</p>
-        </div>
-        <div class="srv-card reveal d1">
-          <div class="srv-num">05</div>
-          <div class="srv-ic"><i class="fa-brands fa-adobe"></i></div>
-          <h3 class="srv-title">Image Editing</h3>
-          <p class="srv-desc">Background removal, color correction, sharpening, typography matching, and web-ready optimization — all in Photoshop.</p>
-        </div>
-        <div class="srv-card reveal d2">
-          <div class="srv-num">06</div>
-          <div class="srv-ic"><i class="fa-solid fa-comments"></i></div>
-          <h3 class="srv-title">Client Communication</h3>
-          <p class="srv-desc">Professional email and ticket communication, issue diagnosis, and bilingual delivery in English and Spanish.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── CONTACT ───────────────────────────────── -->
-  <section id="contact" class="section" aria-labelledby="contact-h">
-    <div class="container">
-      <div class="contact-in reveal">
-        <div class="eyebrow">Contact</div>
-        <h2 id="contact-h" class="contact-h">Let's build something<br><em>great together.</em></h2>
-        <p class="contact-sub">Have a project to discuss? I respond promptly in English and Spanish.</p>
-        <div class="contact-links">
-          <a href="mailto:miguelsc10@hotmail.com" class="c-lnk"><i class="fa-solid fa-envelope fa-fw"></i> miguelsc10@hotmail.com</a>
-          <a href="mailto:nomadax@gmail.com"      class="c-lnk"><i class="fa-solid fa-envelope fa-fw"></i> nomadax@gmail.com</a>
-          <a href="https://www.linkedin.com/in/coto64/" target="_blank" rel="noopener" class="c-lnk"><i class="fa-brands fa-linkedin-in fa-fw"></i> LinkedIn</a>
-          <a href="https://github.com/MiguelSanchezCuello" target="_blank" rel="noopener" class="c-lnk"><i class="fa-brands fa-github fa-fw"></i> GitHub</a>
-          <a href="tel:+18296432686" class="c-lnk"><i class="fa-solid fa-phone fa-fw"></i> +1 (829) 643-2686</a>
-          <a href="https://wa.me/18296432686" target="_blank" rel="noopener" class="c-lnk"><i class="fa-brands fa-whatsapp fa-fw"></i> WhatsApp</a>
+    <!-- ── CONTACT ───────────────────────────────── -->
+    <section id="contact" class="section" aria-labelledby="contact-h">
+      <div class="container">
+        <div class="contact-in reveal">
+          <div class="eyebrow">Contact</div>
+          <h2 id="contact-h" class="contact-h">
+            Let's build something<br /><em>great together.</em>
+          </h2>
+          <p class="contact-sub">
+            Have a project to discuss? I respond promptly in English and
+            Spanish.
+          </p>
+          <div class="contact-links">
+            <a href="mailto:miguelsc10@hotmail.com" class="c-lnk"
+              ><i class="fa-solid fa-envelope fa-fw"></i>
+              miguelsc10@hotmail.com</a
+            >
+            <a href="mailto:nomadax@gmail.com" class="c-lnk"
+              ><i class="fa-solid fa-envelope fa-fw"></i> nomadax@gmail.com</a
+            >
+            <a
+              href="https://www.linkedin.com/in/coto64/"
+              target="_blank"
+              rel="noopener"
+              class="c-lnk"
+              ><i class="fa-brands fa-linkedin-in fa-fw"></i> LinkedIn</a
+            >
+            <a
+              href="https://github.com/MiguelSanchezCuello"
+              target="_blank"
+              rel="noopener"
+              class="c-lnk"
+              ><i class="fa-brands fa-github fa-fw"></i> GitHub</a
+            >
+            <a href="tel:+18296432686" class="c-lnk"
+              ><i class="fa-solid fa-phone fa-fw"></i> +1 (829) 643-2686</a
+            >
+            <a
+              href="https://wa.me/18296432686"
+              target="_blank"
+              rel="noopener"
+              class="c-lnk"
+              ><i class="fa-brands fa-whatsapp fa-fw"></i> WhatsApp</a
+            >
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ── FOOTER ────────────────────────────────── -->
-  <footer>
-    <div class="foot-in">
-      <div class="foot-logo">Miguel<span>.</span></div>
-      <div class="foot-soc">
-        <a href="https://www.linkedin.com/in/coto64/"        target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="https://github.com/MiguelSanchezCuello"    target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-        <a href="https://www.youtube.com/nomadaxable"        target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-        <a href="https://www.instagram.com/coto64/"          target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://twitter.com/mcotox"                 target="_blank" rel="noopener" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-        <a href="https://discord.gg/PbBpF3frAj"             target="_blank" rel="noopener" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+    <!-- ── FOOTER ────────────────────────────────── -->
+    <footer>
+      <div class="foot-in">
+        <div class="foot-logo">Miguel<span>.</span></div>
+        <div class="foot-soc">
+          <a
+            href="https://www.linkedin.com/in/coto64/"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn"
+            ><i class="fa-brands fa-linkedin-in"></i
+          ></a>
+          <a
+            href="https://github.com/MiguelSanchezCuello"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a
+            href="https://www.youtube.com/nomadaxable"
+            target="_blank"
+            rel="noopener"
+            aria-label="YouTube"
+            ><i class="fa-brands fa-youtube"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/coto64/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Instagram"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a
+            href="https://twitter.com/mcotox"
+            target="_blank"
+            rel="noopener"
+            aria-label="X / Twitter"
+            ><i class="fa-brands fa-x-twitter"></i
+          ></a>
+          <a
+            href="https://discord.gg/PbBpF3frAj"
+            target="_blank"
+            rel="noopener"
+            aria-label="Discord"
+            ><i class="fa-brands fa-discord"></i
+          ></a>
+        </div>
+        <p>
+          Website Designer &amp; Developer · Santo Domingo, Dominican Republic
+        </p>
+        <p style="margin-top: 4px">
+          &copy; <span id="yr"></span> Miguel Sanchez. Designed &amp; built from
+          scratch.
+        </p>
       </div>
-      <p>Website Designer &amp; Developer · Santo Domingo, Dominican Republic</p>
-      <p style="margin-top:4px">&copy; <span id="yr"></span> Miguel Sanchez. Designed &amp; built from scratch.</p>
-    </div>
-  </footer>
+    </footer>
 
-  <!-- ── SCRIPT ────────────────────────────────── -->
-  <script>
-    /* Year */
-    document.getElementById('yr').textContent = new Date().getFullYear();
+    <!-- ── SCRIPT ────────────────────────────────── -->
+    <script>
+      /* Year */
+      document.getElementById("yr").textContent = new Date().getFullYear();
 
-    /* Navbar */
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 24), { passive: true });
+      /* Navbar */
+      const nav = document.getElementById("nav");
+      window.addEventListener(
+        "scroll",
+        () => nav.classList.toggle("scrolled", scrollY > 24),
+        { passive: true },
+      );
 
-    /* Hamburger */
-    const hb = document.getElementById('hb');
-    const mn = document.getElementById('mn');
-    hb.addEventListener('click', () => {
-      const o = mn.classList.toggle('open');
-      hb.classList.toggle('open', o);
-      document.body.style.overflow = o ? 'hidden' : '';
-    });
-    document.querySelectorAll('.ml').forEach(l => l.addEventListener('click', () => {
-      mn.classList.remove('open'); hb.classList.remove('open'); document.body.style.overflow = '';
-    }));
+      /* Hamburger */
+      const hb = document.getElementById("hb");
+      const mn = document.getElementById("mn");
+      hb.addEventListener("click", () => {
+        const o = mn.classList.toggle("open");
+        hb.classList.toggle("open", o);
+        document.body.style.overflow = o ? "hidden" : "";
+      });
+      document.querySelectorAll(".ml").forEach((l) =>
+        l.addEventListener("click", () => {
+          mn.classList.remove("open");
+          hb.classList.remove("open");
+          document.body.style.overflow = "";
+        }),
+      );
 
-    /* Scroll reveal */
-    const ro = new IntersectionObserver((es) => {
-      es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); ro.unobserve(e.target); } });
-    }, { threshold: 0.08, rootMargin: '0px 0px -24px 0px' });
-    document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+      /* Scroll reveal */
+      const ro = new IntersectionObserver(
+        (es) => {
+          es.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("in");
+              ro.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.08, rootMargin: "0px 0px -24px 0px" },
+      );
+      document.querySelectorAll(".reveal").forEach((el) => ro.observe(el));
 
-    /* Project filter — display:none so grid reflows, no blank gaps */
-    const cards = document.querySelectorAll('.proj-card');
-    document.querySelectorAll('.fbtn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.fbtn').forEach(b => b.classList.remove('on'));
-        btn.classList.add('on');
-        const f = btn.dataset.filter;
-        cards.forEach(card => {
-          const cats = (card.dataset.category || '').split(' ');
-          card.style.display = (f === 'all' || cats.includes(f)) ? '' : 'none';
+      /* Project filter — display:none so grid reflows, no blank gaps */
+      const cards = document.querySelectorAll(".proj-card");
+      document.querySelectorAll(".fbtn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document
+            .querySelectorAll(".fbtn")
+            .forEach((b) => b.classList.remove("on"));
+          btn.classList.add("on");
+          const f = btn.dataset.filter;
+          cards.forEach((card) => {
+            const cats = (card.dataset.category || "").split(" ");
+            card.style.display = f === "all" || cats.includes(f) ? "" : "none";
+          });
         });
       });
-    });
-  </script>
-</body>
+    </script>
+  </body>
 </html>
